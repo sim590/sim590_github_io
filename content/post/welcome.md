@@ -197,7 +197,9 @@ googleAnalytics = ""
 
 ## Exhausted
 
-I'm not much of a writer yet and this is my first post. I hope it
+I'm not much of a writer yet and this is my first post.
+
+**THE END**
 
 [wordpress]: https://en.wikipedia.org/wiki/WordPress
 [Go]: https://en.wikipedia.org/wiki/Go_(programming_language)
