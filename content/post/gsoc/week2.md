@@ -2,13 +2,13 @@
 categories = ["Google Summer Of Code"]
 date = "2016-06-13T00:22:58-04:00"
 description = ""
-title = "Week 2 - Report"
+title = "[GSOC] Week 2 - Report"
 
 +++
 
 I've been reworking the code for the queries I introduced in the [first week][].
 
-[first week]: {{< relref "week1.md" >}}
+[first week]: {{< ref "post/gsoc/week1.md" >}}
 
 ## What's done
 

@@ -1,7 +1,7 @@
 +++
 categories = ["Google Summer Of Code"]
 date = "2016-06-11T13:06:11-04:00"
-title = "Week 1 - Report"
+title = "[GSOC] Week 1 - Report"
 +++
 
 I have been working on writing serializable structure for remote filtering of
