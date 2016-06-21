@@ -22,7 +22,7 @@ Comme j'ai mentionné dans au [article antérieur]({{< relref "post/gsoc/intro.m
 
 Il reste deux jours avant mon départ pour le Cape, en Afrique du sud. C'est
 pour assister à l'événement **[debconf][]** (« Debian conference »), organisé par
-Debian que je me rends là.  Cet événement est organisé à chaque année et,
+Debian, que je me rends là.  Cet événement est organisé à chaque année et,
 l'année prochaine, c'est à Montréal que ça aura lieu ! ![](/img/quebec.gif)
 
 <div style="text-align:center"> <img src="/img/debconf.png"/> </div>
