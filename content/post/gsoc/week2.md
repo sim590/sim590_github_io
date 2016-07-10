@@ -12,7 +12,7 @@ I've been reworking the code for the queries I introduced in the [first week][].
 
 ## What's done
 
-- I have worked on [value pagination][] and optimization of accnounce operations;
+- I have worked on [value pagination][] and optimization of announce operations;
 - Fixed bugs like [#72][], [#73][];
 - I've split the `Query` into `Select` and `Where` strcutures. This change was
   explained
