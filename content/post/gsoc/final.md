@@ -8,10 +8,10 @@ title = "[GSOC] Final report"
 
 <div style="float:right">
     <img width="250" src="/img/gsoc.png"/><br>
-        <div style="text-align:center">
-            <img width="150" src="/img/debianlogo.svg"/><br><br>
-            <img width="250" src="/img/ring.svg"/>
-        </div>
+    <div style="text-align:center">
+        <img width="150" src="/img/debianlogo.svg"/><br><br>
+        <img width="250" src="/img/ring.svg"/>
+    </div>
 </div>
 
 The Google Summer of Code is now over. It has been a great experience and I'm
@@ -29,8 +29,8 @@ for e.g.), blockchain based applications, etc.
 
 I've had the great opportunity to go to the Debian Conference 2016. I've been
 introduced to the debian community and debian developpers ("dd" in short :p). I
-was lucky to meet with great people like the president of the FSF, John Sulivan.
-You can have a look at my Debian conference report [here]({{< ref
+was lucky to meet with great people like the president of the FSF, John
+Sullivan.  You can have a look at my Debian conference report [here]({{< ref
 "post/gsoc/week567.md" >}}).
 
 If you want to read my debian reports,  you can do so by browsing the "Google
@@ -108,6 +108,8 @@ https://github.com/savoirfairelinux/opendht/commits/master?author=sim590
 
 ## What's left to be done
 
+### Data persistence
+
 The only thing left before achieving the totality of my work is to rigorously
 test the data persistence behavior to demonstrate the network traffic reduction.
 To do so we use our [benchmark python module][]. We are able to analyse traffic
@@ -120,5 +122,11 @@ and produce plots like this one:
 
 This particular plot was drawn before the enhancements. We are confident to
 improve the results using my work produced during the GSOC.
+
+### TCP
+
+In the middle of the GSOC, we soon realized that passing from UDP to TCP would
+ask too much efforts in too short lapse of time. Also, it is not yet clear if we
+should really do that.
 
 [benchmark python module]: https://github.com/savoirfairelinux/opendht/tree/master/python/tools
