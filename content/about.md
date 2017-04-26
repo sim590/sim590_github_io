@@ -4,7 +4,7 @@ title = "About me"
 description = "Subtitles are fun, but I never know how to write those"
 +++
 
-**Edited** on 2016-05-18
+**Edited** on 2017-04-26
 
 ![about me](/img/about.me.jpg)
 
@@ -40,3 +40,15 @@ Cheers.
 [Québec]: http://lmgtfy.com/?q=Qu%C3%A9bec
 [Université du Québec à Montréal]: http://www.uqam.ca/
 [Archlinux]: https://wiki.archlinux.org/
+
+## Public information
+
+- My GPG key fingerprint: `70B9 F71B 74C9 553D 01A1  A0EF 824A 8B97 F97E 4B08`
+- My Curriculum Vitae
+    - [`file`][cv]
+    - SHA256: `1e77b46090c0e91efa0084917bb73ffa79bf748e0624f0816b97be4f9ebbddc2`
+    - [`SHA256.gpg`][cv.sha256.gpg]
+
+[cv]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170426-f4e1fbe.pdf
+[cv.sha256]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170426-f4e1fbe.pdf.sha256
+[cv.sha256.gpg]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170426-f4e1fbe.pdf.sha256.gpg
