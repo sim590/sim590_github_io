@@ -44,11 +44,9 @@ Cheers.
 ## Public information
 
 - My GPG key fingerprint: `70B9 F71B 74C9 553D 01A1  A0EF 824A 8B97 F97E 4B08`
-- My Curriculum Vitae
-    - [`file`][cv]
-    - SHA256: `1e77b46090c0e91efa0084917bb73ffa79bf748e0624f0816b97be4f9ebbddc2`
-    - [`SHA256.gpg`][cv.sha256.gpg]
+- My Curriculum Vitae: [[en]][cv-en] (gpg: [cv.gpg]), [[fr]][cv] (gpg: [cv-en.gpg])
 
-[cv]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170426-f4e1fbe.pdf
-[cv.sha256]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170426-f4e1fbe.pdf.sha256
-[cv.sha256.gpg]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170426-f4e1fbe.pdf.sha256.gpg
+[cv]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170518-ae177ce.pdf
+[cv.gpg]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170518-ae177ce.pdf.gpg
+[cv-en]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170518-adba250.pdf
+[cv-en.gpg]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170518-adba250.pdf.gpg
