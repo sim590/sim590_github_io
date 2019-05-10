@@ -4,7 +4,7 @@ title = "About me"
 description = "Subtitles are fun, but I never know how to write those"
 +++
 
-**Edited** on 2017-04-26
+**Edited** on 2019-05-10
 
 ![about me](/img/about.me.jpg)
 
@@ -45,8 +45,10 @@ Cheers.
 
 - My GPG key fingerprint: `70B9 F71B 74C9 553D 01A1  A0EF 824A 8B97 F97E 4B08`
 - My Curriculum Vitae: [[en]][cv-en] (gpg: [cv.gpg]), [[fr]][cv] (gpg: [cv-en.gpg])
+- My [master thesis][master] (français).
 
 [cv]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-20190423-4ac0b8f.pdf
 [cv.gpg]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-20190423-4ac0b8f.pdf.gpg
 [cv-en]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170711-13664f4.pdf
 [cv-en.gpg]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170711-13664f4.pdf.gpg
+[master]: /doc/[SimonD]mémoire-20190430-121714a.pdf
