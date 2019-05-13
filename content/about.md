@@ -44,7 +44,7 @@ Cheers.
 ## Public information
 
 - My GPG key fingerprint: `70B9 F71B 74C9 553D 01A1  A0EF 824A 8B97 F97E 4B08`
-- My Curriculum Vitae: [[en]][cv-en] (gpg: [cv.gpg]), [[fr]][cv] (gpg: [cv-en.gpg])
+- My Curriculum Vitae: [[fr]][cv] (gpg: [cv.gpg]), [[en]][cv-en] (gpg: [cv-en.gpg])
 - My [master thesis][master] (français).
 
 [cv]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-20190513-bfe383d.pdf
