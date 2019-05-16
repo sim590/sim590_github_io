@@ -49,6 +49,6 @@ Cheers.
 
 [cv]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-20190513-bfe383d.pdf
 [cv.gpg]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-20190513-bfe383d.pdf.gpg
-[cv-en]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170711-13664f4.pdf
-[cv-en.gpg]: /doc/cv/[SimonDésaulniers]curriculum-vitae-20170711-13664f4.pdf.gpg
+[cv-en]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-20190516-c7fa1ed-EN.pdf
+[cv-en.gpg]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-20190516-c7fa1ed-EN.pdf.gpg
 [master]: /doc/[SimonD]mémoire-20190430-121714a.pdf
