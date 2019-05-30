@@ -47,8 +47,8 @@ Cheers.
 - My Curriculum Vitae: [[fr]][cv] (gpg: [cv.gpg]), [[en]][cv-en] (gpg: [cv-en.gpg])
 - My [master thesis][master] (français).
 
-[cv]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-FR-20190529-95be735.pdf
-[cv.gpg]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-FR-20190529-95be735.pdf.gpg
-[cv-en]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-EN-20190529-f07c0e5.pdf
-[cv-en.gpg]: /doc/cv/[SimonDésaulniers]Curriculum-vitae-EN-20190529-f07c0e5.pdf.gpg
+[cv]: /doc/cv/cv-fr.pdf
+[cv.gpg]: /doc/cv/cv-fr.pdf.gpg
+[cv-en]: /doc/cv/cv-en.pdf
+[cv-en.gpg]: /doc/cv/cv-en.pdf.gpg
 [master]: /doc/[SimonD]mémoire-20190430-121714a.pdf
