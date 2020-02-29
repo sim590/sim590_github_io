@@ -1,2 +1,5 @@
-*.swp
-*.swo
+resources/
+
+# Vim files
+*.sw[p|o]
+*.un~
