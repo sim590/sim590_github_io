@@ -6,7 +6,7 @@ has_submodule=$?
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo -t imperfect
+hugo
 
 if (( $? == 0 )) && (( $has_submodule == 0 )); then
   # Go To Public folder

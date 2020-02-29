@@ -1,0 +1,24 @@
+
+[fr]
+  title = "Simon Désaulniers"
+  languageName = "Français"
+  weight = 1
+  languagedir = "fr"
+  contentdir = "content/fr"
+
+[eo]
+  title = "Simon Désaulniers"
+  languageName = "Esperanto"
+  weight = 2
+  languagedir = "eo"
+  contentdir = "content/eo"
+
+[en]
+  title = "Simon Désaulniers"
+  languageName = "English"
+  weight = 3
+  languagedir = "en"
+  contentdir = "content/en"
+
+#  vim: set sts=2 ts=2 sw=2 tw=120 et :
+

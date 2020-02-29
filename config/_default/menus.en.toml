@@ -1,0 +1,27 @@
+
+[[main]]
+  identifier = "archive"
+  name = "Archive"
+  url = "archive"
+  weight = 3
+
+[[main]]
+  identifier = "my-work"
+  name = "My work"
+  url = "showcase"
+  weight = 4
+
+[[main]]
+  identifier = "about"
+  name = "About"
+  url = "about"
+  weight = 5
+
+[[main]]
+  identifier = "contact"
+  name = "Contact me"
+  url = "contact"
+  weight = 6
+
+#  vim: set sts=2 ts=2 sw=2 tw=120 et :
+

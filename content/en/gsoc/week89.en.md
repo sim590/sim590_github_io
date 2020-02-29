@@ -1,10 +1,8 @@
 +++
-author = ""
-categories = ['Google Summer Of Code']
-date = "2016-07-25T19:41:44-04:00"
+series      = ['Google Summer Of Code']
+date        = "2016-07-25T19:41:44-04:00"
 description = "Jet lag & PHT"
-title = "[GSOC] Week 8&9 Report"
-
+title       = "[GSOC] Week 8&9 Report"
 +++
 
 ## Week 8
@@ -19,7 +17,7 @@ I have synced myself with my coworker Nicolas Reynaud, who's working on building
 the indexation system over the DHT. We have worked together on critical
 algorithms: concurrent maintenance of data in the trie (PHT).
 
-[debconf]: {{< ref "post/gsoc/week567.md" >}}
+[debconf]: {{< ref "gsoc/week567.en.md" >}}
 
 ## Week 9
 
@@ -43,4 +41,4 @@ Finally, I have fixed some minor bugs in my work on the [queries][].
 
 [Ring]: https://ring.cx
 [RMLL]: https://sec2016.rmll.info/
-[queries]: {{< ref "post/gsoc/week34.md" >}}
+[queries]: {{< ref "gsoc/week34.en.md" >}}

@@ -1,0 +1,15 @@
+
+[[main]]
+  identifier = "pri"
+  name = "Pri mi"
+  url = "pri"
+  weight = 5
+
+[[main]]
+  identifier = "kontakto"
+  name = "Kontaktu min"
+  url = "kontaktu-min"
+  weight = 6
+
+#  vim: set sts=2 ts=2 sw=2 tw=120 et :
+

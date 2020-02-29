@@ -1,5 +1,5 @@
 +++
-categories = ["Google Summer Of Code"]
+series = ["Google Summer Of Code"]
 date = "2016-06-11T13:06:11-04:00"
 title = "[GSOC] Week 1 - Report"
 +++

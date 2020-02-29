@@ -1,9 +1,8 @@
 +++
-categories = ['Google Summer Of Code']
-date = "2016-06-03T00:02:37-04:00"
-title = "Google Summer Of Code"
+series      = ['Google Summer Of Code']
+date        = "2016-06-03T00:02:37-04:00"
+title       = "Google Summer Of Code"
 description = ""
-
 +++
 
 I am part of the group of students working with the Debian organization. You can
@@ -17,7 +16,7 @@ Montréal, I have had the opportunity to meet with the company
 [Savoir-Faire Linux][] in Montreal last year and that's when I found out about
 their exciting project: [Ring][].
 
-<div style="text-align:center"><img src="/img/ring.svg"/></div>
+<div style="text-align:center"><img src="/images/ring.svg"/></div>
 
 Ring is one of the few projects which bring communication confidentiality and
 freedom in the hands of the users.
@@ -49,7 +48,7 @@ makes the tuple `(H_n, xor)` a metric space, where `H_n` is the space of
 identifier keys of length `n`. This way, you can find an identifier be the
 *closest* to a target hash than the rest of the nodes in the network.
 
-<div style="text-align:center"><img src="/img/dht.eight.nodes.png"/></div>
+<div style="text-align:center"><img src="/images/dht.eight.nodes.png"/></div>
 
 In order to find some data that is associated with some hash `h`, you have to
 find the nodes in the network for which the distance between their hash

@@ -1,5 +1,5 @@
 +++
-categories = ['Google Summer Of Code']
+series = ['Google Summer Of Code']
 date = "2016-08-19T12:04:13-04:00"
 description = ""
 title = "[GSOC] Final report"
@@ -7,10 +7,10 @@ title = "[GSOC] Final report"
 +++
 
 <div style="float:right">
-    <img width="250" src="/img/gsoc.png"/><br>
+    <img width="250" src="/images/gsoc.png"/><br>
     <div style="text-align:center">
-        <img width="150" src="/img/debianlogo.svg"/><br><br>
-        <img width="250" src="/img/ring.svg"/>
+        <img width="150" src="/images/debianlogo.svg"/><br><br>
+        <img width="250" src="/images/ring.svg"/>
     </div>
 </div>
 
@@ -31,7 +31,7 @@ I've had the great opportunity to go to the Debian Conference 2016. I've been
 introduced to the debian community and debian developpers ("dd" in short :p). I
 was lucky to meet with great people like the president of the FSF, John
 Sullivan.  You can have a look at my Debian conference report [here]({{< ref
-"post/gsoc/week567.md" >}}).
+"gsoc/week567.en.md" >}}).
 
 If you want to read my debian reports,  you can do so by browsing the "Google
 Summer Of Code" category on this blog.
@@ -116,7 +116,7 @@ To do so we use our [benchmark python module][]. We are able to analyse traffic
 and produce plots like this one:
 
 <div style="text-align:center">
-<img src="/img/gsoc/traffic.plot.png"/><br>
+<img src="/images/gsoc/traffic.plot.png"/><br>
 <b>Plot:</b> 32 nodes, 1600 values with normal condition test.
 </div>
 

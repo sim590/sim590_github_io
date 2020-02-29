@@ -1,13 +1,14 @@
 +++
-author = ""
-categories = ['Google Summer Of Code']
+series = ['Google Summer Of Code']
 date = "2016-07-10T20:06:24+02:00"
 description = "Debconf 2016"
 title = "[GSOC] Week 5&6&7 Report"
 
 +++
 
-During week 5, 6 and 7, [I have been to the debian conference 2016]({{< ref "post/adieu.md" >}}). It was really interesting meeting with a lot of people all so involved in Debian.
+During week 5, 6 and 7, [I have been to the debian conference 2016]({{< ref
+path="adieu.fr.md" lang="fr" >}}). It was really interesting meeting with a
+lot of people all so involved in Debian.
 
 ## Key signing party
 

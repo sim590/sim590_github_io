@@ -1,5 +1,5 @@
 +++
-categories = ['Google Summer Of Code']
+series = ['Google Summer Of Code']
 date = "2016-07-10T19:12:18+02:00"
 description = ""
 title = "[GSOC] Week 3&4 Report"
@@ -9,7 +9,7 @@ I have finally made a version of the [queries][] code that can viably be
 integrated into the master branch of OpenDHT. I am awaiting my mentor's
 approval and/or comments.
 
-[queries]: {{< ref "post/gsoc/week1.md" >}}
+[queries]: {{< ref "gsoc/week1.en.md" >}}
 
 ## What's done
 
