@@ -4,7 +4,7 @@ description = "Simon Désaulniers"
 custom_css = []
 custom_js = []
 useFaviconGenerator = false # https://www.favicon-generator.org/
-meta_image = "/images/moi.jpg"
+meta_image = "/logo.png"
 themecolor = ""
 
 themeOptions = [ "dark", "light", "hacker", "solarized", "kimbie" ]
