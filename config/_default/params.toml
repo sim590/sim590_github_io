@@ -3,8 +3,8 @@ logoType = "short" # long, short
 description = "Simon Désaulniers"
 custom_css = []
 custom_js = []
-useFaviconGenerator = true # https://www.favicon-generator.org/
-meta_image = ""
+useFaviconGenerator = false # https://www.favicon-generator.org/
+meta_image = "/images/moi.jpg"
 themecolor = ""
 
 themeOptions = [ "dark", "light", "hacker", "solarized", "kimbie" ]
