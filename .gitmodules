@@ -2,3 +2,7 @@
 	path = public
 	url = git@github.com:sim590/sim590.github.io.git
 	branch = master
+[submodule "themes/zzo"]
+	path = themes/zzo
+	url = https://github.com/sim590/hugo-theme-zzo
+    branch = fr-eo-lang
