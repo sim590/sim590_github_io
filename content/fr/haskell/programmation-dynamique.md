@@ -3,9 +3,11 @@ categories = ['Algorithmique', 'Haskell', 'Mémoïsation', 'Programmation', 'Pro
 tags       = ['Séquence de Collatz', 'Data.Array', 'nombre triangulaire']
 title      = "Haskell: programmation dynamique"
 date       = 2020-03-02T04:06:13-05:00
-libraries  = ['mathjax']
 meta_image = "images/haskell.png"
 +++
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 L'approche de programmation dynamique est souvent associée au remplissage d'un
 tableau à deux dimensions et à l'écriture explicite de ce procédé sous forme
@@ -62,9 +64,9 @@ solutions aux sous-problèmes sont elles-mêmes optimales.
 import Numeric.Natural
 ```
 
-Considérons le problème de déterminer le $n^{\text{ème}}$ terme de la [suite de
-Fibonacci][fibo]. La récurrence très connue, définie sur les entiers naturels,
-est la suivante:
+Considérons le problème de déterminer le \\(n^{\text{ème}}\\) terme de la [suite
+de Fibonacci][fibo]. La récurrence très connue, définie sur les entiers
+naturels, est la suivante:
 
 $$
 f(n) =
@@ -85,13 +87,13 @@ fib n = fib (n-1) + fib (n-2)
 ```
 
 Cet algorithme est cependant non optimal puisqu'il est facile de voir que
-celui-ci effectue plusieurs calculs en double. Par exemple, pour $f(5)$ on doit
-calculer $f(3)$ et $f(4) = f(2) + f(3)$. On voit bien qu'au moment de calculer
-$f(4)$, il serait pertinent de récupérer la valeur déjà calculée $f(3)$ afin
-d'éviter de la recalculer. Malheureusement, l'algorithme décrit plus haut ne
-fait pas cela. Il vaut la peine de noter que plus la valeur de $n$ est élevée,
-plus le nombre de redondance augmente, ce qui gonfle ainsi la gravité du
-problème.
+celui-ci effectue plusieurs calculs en double. Par exemple, pour \\(f(5)\\) on
+doit calculer \\(f(3)\\) et \\(f(4) = f(2) + f(3)\\). On voit bien qu'au moment
+de calculer \\(f(4)\\), il serait pertinent de récupérer la valeur déjà calculée
+\\(f(3)\\) afin d'éviter de la recalculer. Malheureusement, l'algorithme décrit
+plus haut ne fait pas cela. Il vaut la peine de noter que plus la valeur de
+\\(n\\) est élevée, plus le nombre de redondance augmente, ce qui gonfle ainsi
+la gravité du problème.
 
 ### Fibonacci: optimisation
 
@@ -109,9 +111,10 @@ mfib = (map fib [0..] !!) -- (ii)
 Le changement apporté au code plus haut devrait être analysé en plusieurs
 parties. Premièrement, on retrouve la définition de `fib` qui ressemble pas mal
 à la première écriture. Cependant, on remarque que la définition du cas général
-$(i)$ ne fait plus directement appel à `fib`, mais à `mfib`.  Deuxièmement, on
-remarque que la définition principale de `mfib` $(ii)$ fait un appel à `fib`. On
-a donc deux fonctions s'appellant en chaîne, ce qui ferme la boucle d'appels:
+\\((i)\\) ne fait plus directement appel à `fib`, mais à `mfib`. Deuxièmement,
+on remarque que la définition principale de `mfib` \\((ii)\\) fait un appel à
+`fib`. On a donc deux fonctions s'appellant en chaîne, ce qui ferme la boucle
+d'appels:
 
 $$\texttt{fib} \rightarrow \texttt{mfib} \rightarrow \texttt{fib} \rightarrow \dots$$
 
@@ -119,7 +122,7 @@ Ainsi, le tout correspond à une fonction récurisve convergeant vers les cas de
 base tout comme c'était le cas dans [la première approche]({{< ref
 "#suite-de-fibonacci">}}). Ceci dit, l'entrelacement entre `mfib` et `fib` forme
 justement la différence majeur entre les deux approches. En effet, `mfib` est
-défini comme l'accès `(!!)` au $n^{\text{ème}}$ élément de la liste
+défini comme l'accès `(!!)` au \\(n^{\text{ème}}\\) élément de la liste
 
 ```haskell
 map fib [0..] -- (ii)
@@ -137,21 +140,22 @@ paresseux]({{<ref "#%C3%A9valuation-paresseuse">}}), seuls les éléments
 nécessaires au calcul demandé par l'appel initial de `mfib` seront calculés.
 
 Regardons de plus près ce qui se passe avec un exemple sur `mfib 5`.
-Premièrement, l'accès au $5^\text{ème}$ élément de la liste sera demandé, ce qui
-engendrera l'appel à `fib 5` qui en retour correspond à `mfib 3` et `mfib 4`.
-L'expression partielle correspondant au calcul demandé initialement est donc
-`mfib 3 + mfib 4`. Or, `mfib 3` est le $3^\text{ème}$ élément de la liste
-$(ii)$. On déduit une chose similaire pour `mfib 4`.
+Premièrement, l'accès au \\(5^\text{ème}\\) élément de la liste sera demandé, ce
+qui engendrera l'appel à `fib 5` qui en retour correspond à `mfib 3` et `mfib
+4`. L'expression partielle correspondant au calcul demandé initialement est
+donc `mfib 3 + mfib 4`. Or, `mfib 3` est le \\(3^\text{ème}\\) élément de la
+liste \\((ii)\\). On déduit une chose similaire pour `mfib 4`.
 
 On pourrait croire un instant qu'Haskell pourrait calculer `mfib 3` une fois, le
 stocker dans le tableau et que, le moment venu, `mfib 4` provoque le même
-calcul, mais il s'avère qu'Haskell partage la liste $(ii)$ entre les différents
-appels de `fib`. Ainsi, le premier fil d'exécution permettant de calculer `fib 3`
-provoquera l'inscription de cette valeur dans la liste afin que les appels
-subséquents n'aient qu'à réutiliser la valeur dans la liste. Il s'agit là de la
-forme la plus évidente et intuitive de l'écriture de cet algorithme sous une
-approche de programmation dynamique. Autrement, il est possible aussi d'écrire
-une expression remplissant la même fonction en une ligne:
+calcul, mais il s'avère qu'Haskell partage la liste \\((ii)\\) entre les
+différents appels de `fib`. Ainsi, le premier fil d'exécution permettant de
+calculer `fib 3` provoquera l'inscription de cette valeur dans la liste afin que
+les appels subséquents n'aient qu'à réutiliser la valeur dans la liste. Il
+s'agit là de la forme la plus évidente et intuitive de l'écriture de cet
+algorithme sous une approche de programmation dynamique. Autrement, il est
+possible aussi d'écrire une expression remplissant la même fonction en une
+ligne:
 
 ```haskell
 fibs :: [Natural]
@@ -160,7 +164,7 @@ fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 
 Cett expression correspond bien sûr à la liste de tous les nombres de Fibonacci.
 Il suffit maintenant d'accéder à l'élément qu'on souhaite, par exemple le
-$5^\text{ème}$, avec `fibs !! 5`. Ici encore, on emploie une approche de
+\\(5^\text{ème}\\), avec `fibs !! 5`. Ici encore, on emploie une approche de
 programmation dynamique puisque la liste est progressivement construite en
 réutilisant les deux derniers éléments de la liste pour les additionner afin de
 former le prochain élément *ad infinitum*.
@@ -175,8 +179,8 @@ import Numeric.Natural
 ```
 
 Considérons maintenant le problème de générer les [nombres
-triangulaires][triangulaire]. On sait que $t_n$, le $n^{\text{ème}}$ nombre
-triangulaire, est donné par l'expression suivante:
+triangulaires][triangulaire]. On sait que \\(t_n\\), le \\(n^{\text{ème}}\\)
+nombre triangulaire, est donné par l'expression suivante:
 
 $$ t_n = \sum_{i=1}^n i = 1 + 2 + \dots + n$$
 
@@ -189,7 +193,7 @@ triangs = [sum [1..n] | n <- [1..]]
 
 Cependant, cette première approche est absolument affreuse. On refait clairement
 plusieurs fois les mêmes calculs. On pourrait aussi tirer avantage du fait que
-$t_n$ trouve l'expression équivalente suivante:
+\\(t_n\\) trouve l'expression équivalente suivante:
 
 $$ t_n = \frac{n(n+1)}{2} $$
 
@@ -250,16 +254,16 @@ g(m) =
 \end{cases}
 $$
 
-Une séquence de Collatz, pour une racine $r$, est définie comme la suite
+Une séquence de Collatz, pour une racine \\(r\\), est définie comme la suite
 
 $$(g(r), (g \circ g)(r), (g \circ g \circ g)(r), \dots, 1).$$
 
-où $\circ$ représente la composition de fonction.
+où \\(\circ\\) représente la composition de fonction.
 
 ### Problème
 
-Pour $n \in \mathbb{N}$, on souhaite déterminer la taille de la plus longue
-séquence de Collatz pour tout $1 \le r \le n$.
+Pour \\(n \in \mathbb{N}\\), on souhaite déterminer la taille de la plus longue
+séquence de Collatz pour tout \\(1 \le r \le n\\).
 
 Une approche naïve pourrait ressembler à la suivante. Définissons premièrement
 une fonction calculant la prochaine valeur de la séquence. Appelons la `step`:
@@ -272,14 +276,15 @@ step m
   | otherwise = (3 * m + 1) `div` 2
 ```
 
-Remarquons que le cas où $m$ est impair n'est plus $3m+1$, mais maintenant
-$\frac{(3m+1)}{2}$. Ceci est possible sans perte de généralité puisque si $m$
-est impair, alors $m=2k+1$ pour $k\in\mathbb{N}$. Ainsi,
+Remarquons que le cas où \\(m\\) est impair n'est plus \\(3m+1\\), mais
+maintenant \\(\frac{(3m+1)}{2}\\). Ceci est possible sans perte de généralité
+puisque si \\(m\\) est impair, alors \\(m=2k+1\\) pour \\(k\in\mathbb{N}\\).
+Ainsi,
 
 $$ 3m+1 = 3(2k+1)+1 = 2(3k +2) \quad \text{est pair}. $$
 
 Ce faisant, le traitement où l'argument de `step` est pair peut tout de suite
-s'appliquer sur l'image de $3m+1$. On sauve ainsi une étape à chaque nombre
+s'appliquer sur l'image de \\(3m+1\\). On sauve ainsi une étape à chaque nombre
 impair rencontré.
 
 Ensuite, l'algorithme bête pour déterminer la longueur d'une séquence de Collatz
@@ -294,8 +299,8 @@ La lecture est assez directe. On itère sur les appels successifs de `step` avec
 comme premier argument `m` jusqu'à ce qu'on tombe sur `1`. Ici, `iterate` créé
 la liste de tous les résultats d'applicaiton de `step`. On n'a donc qu'à prendre
 la taille de cette liste et additionner 1 (pour compter le nombre 1). Afin de
-calculer la valeur maximale pour $1 \le r \le \text{n}$, on peut alors calculer
-comme suit:
+calculer la valeur maximale pour \\(1 \le r \le \text{n}\\), on peut alors
+calculer comme suit:
 
 ```haskell
 maxDumb :: Natural -> Natural
@@ -303,12 +308,12 @@ maxDumb 1 = 0
 maxDumb n = snd $ maximum $ map (\ m -> (dumbSeq m, m)) [1..n]
 ```
 
-Ici, on créé une liste de paires ordonnées $(g^i(m), m)$. On trouve le maximum
-de cette liste en comparant le premier élément de chaque paire ordonnée (le
-comportement par défaut de `compare` tel que défini pour l'instance
-`(,) a` de la classe `Ord`).
+Ici, on créé une liste de paires ordonnées \\((g^i(m), m)\\). On trouve le
+maximum de cette liste en comparant le premier élément de chaque paire ordonnée
+(le comportement par défaut de `compare` tel que défini pour l'instance `(,) a`
+de la classe `Ord`).
 
-Clairement, pour $n$ suffisamment grand, le problème peut devenir couteux en
+Clairement, pour \\(n\\) suffisamment grand, le problème peut devenir couteux en
 temps. On remarque bien sûr que certaines séquences se croisent. Par exemple:
 
 ```plain
@@ -316,14 +321,14 @@ r = 3 => g(3) = g(5) = g(8) = g(4) = g(2) = 1
 r = 4 =>                      g(4) = g(2) = 1
 ```
 
-Ce faisant, si on avait à calculer la longueur de la séquence pour $g(3)$ avant
-$g(4)$, alors le calcul à l'itération $r=4$ serait gratuit si nous employions
-une approche de programmation dynamique.
+Ce faisant, si on avait à calculer la longueur de la séquence pour \\(g(3)\\)
+avant \\(g(4)\\), alors le calcul à l'itération \\(r=4\\) serait gratuit si nous
+employions une approche de programmation dynamique.
 
 
-Supposons qu'on soit intéressé à trouver la réponse pour $n$ très grand. Il
+Supposons qu'on soit intéressé à trouver la réponse pour \\(n\\) très grand. Il
 serait d'abord nécessaire de fixer une taille maximale pour l'antémémoire
-utilisée pour stocker les valeurs déjà calculées. Disons que $10^6$ est
+utilisée pour stocker les valeurs déjà calculées. Disons que \\(10^6\\) est
 raisonnable:
 
 ```haskell
@@ -348,7 +353,7 @@ seqArray = listArray bounds' [ seq' i | i <- range bounds']
 ```
 
 Nous avons grandement avantage ici à utiliser un tableau permettant un accès
-$\mathcal{O}(1)$ pour chaque valeur. Bien que c'était autant le cas pour les
+\\(\mathcal{O}(1)\\) pour chaque valeur. Bien que c'était autant le cas pour les
 deux problèmes précédents, nous n'avons pas introduit l'utilisation de
 `Data.Array` jusqu'ici afin de simplifier les choses.
 
@@ -369,7 +374,7 @@ tout**.
 ### Séquence de taille maximale
 
 Finalement, la fonction suivante évalue la taille maximale d'une séquence pour
-une racine $1 \le r \le \texttt{n}$.
+une racine \\(1 \le r \le \texttt{n}\\).
 
 ```haskell
 maxSeq :: Natural -> Natural
