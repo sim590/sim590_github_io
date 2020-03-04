@@ -366,10 +366,10 @@ s'apparentant au langage C, par exemple.
 admissibles pour indexation dans le tableau.* **La paresse d'Haskell s'occupe de
 tout**.
 
-### Séquence de longueur maximale maximale
+### Séquence de taille maximale
 
-Finalement, la fonction suivante évalue la longueur de la séquence maximale
-pour une racine $1 \le r \le \texttt{n}$.
+Finalement, la fonction suivante évalue la taille maximale d'une séquence pour
+une racine $1 \le r \le \texttt{n}$.
 
 ```haskell
 maxSeq :: Natural -> Natural
