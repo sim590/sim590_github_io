@@ -250,7 +250,7 @@ g(m) =
 \begin{cases}
   \frac{m}{2} & \text{si}\ m\ \text{est pair}\\\\
   \\\\ % Nécessaire car autrement, l'équation n'arrive pas à se dessiner (trop serré)
-  3n + 1      & \text{sinon}
+  3m + 1      & \text{sinon}
 \end{cases}
 $$
 
