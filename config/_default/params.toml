@@ -85,7 +85,7 @@ authorImage = "/images/moi.jpg"
 useGravatar = false
 location = "Montréal, Québec"
 organization = ""
-link = "http://sim590.github.io/"
+link = "https://sim590.github.io/"
 
 # sidebar
 enableBio = true

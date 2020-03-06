@@ -1,4 +1,4 @@
-baseURL = "http://sim590.github.io" # The URL of your site.
+baseURL = "https://sim590.github.io" # The URL of your site.
 title = "Simon Désaulniers" # Title of your site
 theme = "zzo" # Name of Zzo theme folder in `themes/`.
 
