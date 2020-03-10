@@ -3,7 +3,7 @@ categories = ['Cybersécurité', 'Cryptographie', 'Vie privée']
 tags       = ['Chiffrement', 'Chiffrement de bout en bout', 'Confidentialité', 'Signal', 'WhatsApp', 'Protocole', 'Protocole de communication', 'Communication']
 title      = "Comment bien assurer la vie privée du clavardage?"
 date       = 2020-03-09
-meta_image = "images/chiffrement-de-bout-en-bout.jpg"
+meta_image = "images/chiffrement-de-bout-en-bout.png"
 +++
 
 Lorsqu'on utilise les différents outils de communications habituels de nos
