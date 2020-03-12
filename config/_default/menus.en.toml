@@ -3,12 +3,18 @@
   identifier = "archive"
   name = "Archive"
   url = "archive"
-  weight = 3
+  weight = 2
 
 [[main]]
   identifier = "my-work"
   name = "My work"
   url = "showcase"
+  weight = 3
+
+[[main]]
+  identifier = "publication"
+  name = "Publications"
+  url = "publication"
   weight = 4
 
 [[main]]
