@@ -3,6 +3,12 @@
   identifier = "laborajxoj"
   name = "Mia laboraĵlisto"
   url = "showcase"
+  weight = 2
+
+[[main]]
+  identifier = "eldonoj"
+  name = "Eldonoj"
+  url = "publication"
   weight = 3
 
 [[main]]
