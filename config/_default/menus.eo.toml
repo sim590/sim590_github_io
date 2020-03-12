@@ -1,5 +1,11 @@
 
 [[main]]
+  identifier = "laborajxoj"
+  name = "Mia laboraĵlisto"
+  url = "showcase"
+  weight = 3
+
+[[main]]
   identifier = "pri"
   name = "Pri mi"
   url = "pri"
