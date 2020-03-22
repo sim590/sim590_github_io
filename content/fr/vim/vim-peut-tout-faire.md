@@ -3,7 +3,7 @@ categories = ['Techno', 'Outil', 'Éditeur de texte', 'Programmation']
 tags       = ['Vim', 'hjkl', 'greffon']
 title      = "Vim peut tout faire"
 date       = 2020-03-22T11:11:56-04:00
-meta_image = "images/vim/vim-peut-tout-faire/vim-all-the-things"
+meta_image = "images/vim/vim-peut-tout-faire/vim-all-the-things.jpg"
 +++
 
 Vim est un [éditeur de texte][editeur] et clairement le meilleur qui soit. Je ne
