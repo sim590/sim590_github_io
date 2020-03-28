@@ -65,7 +65,7 @@ Vim comporte plusieurs modes:
 Le langage de touche est le celui du mode Normal. C'est là que s'opère la magie
 des doigts permettant l'édition aisée du texte. Je ne ferai pas un cours complet
 sur ce mode, mais je vous invite à lire plus amplement sur le sujet. Pour ce
-faire, référez vous à la [liste de références au bas de cet article]({{< ref
+faire, référez-vous à la [liste de références au bas de cet article]({{< ref
 "#références-additionnelles" >}}).
 
 Ainsi, dans le mode Normal, les touches de l'alphabet n'insèrent pas simplement
@@ -78,7 +78,7 @@ On peut catégoriser ces fonctions en trois (3) types:
 
 ### Mouvements
 
-Afin de se déplacer dans le fichier, on utiliser tout le temps le mode normal
+Afin de se déplacer dans le fichier, on utilise tout le temps le mode normal
 puisque celui-ci comporte des fonctions très efficaces à cette fin. Voici
 quelques unes de celles-ci:
 
@@ -109,12 +109,12 @@ les fonctions correspondantes.
 
 ![vim-f](/images/vim/vim-peut-tout-faire/vim-f-barre-oblique-url.gif)
 
-La touche `f` est une touche capitale. Elle est utilise conjointement avec `;`
+La touche `f` est une touche capitale. Elle est utilisée conjointement avec `;`
 et `,` afin de naviguer sur les différentes occurrences d'une même lettre. On
 utilise la touche `f`, qui attend un argument, afin de trouver la prochaine
 occurrence d'une lettre. Dans l'exemple ci-haut, `f/` déplace le curseur jusqu'à
 la prochaine occurrence de `/` sur la ligne. Et si on souhaitait plutôt aller à
-la seconde ou la troisième occurrence? Et bien, il suffit de taper la touche `;`
+la seconde ou la troisième occurrence? Eh bien, il suffit de taper la touche `;`
 et le curseur ira à la prochaine occurence. Cette procédure se répète
 indéfiniment. Si on connait le rang du caractère qu'on cherche, disons `4`, alors
 on peut simplement faire `4f/`.
@@ -142,7 +142,7 @@ afin de modifier le texte.
 
 ![vim-f](/images/vim/vim-peut-tout-faire/vim-cip.gif)
 
-Par exemple, afin de changer l'intérieure d'une parenthèse dans une ligne de
+Par exemple, afin de changer l'intérieur d'une parenthèse dans une ligne de
 code comme dans l'exemple ci-haut, on procède en tapant sur les touches `ci)`.
 La touche `c` est la commande de changement et `i)` est un mouvement qui
 signifie *à l'intérieur de la parenthèse* (*inside parenthesis* en anglais).
@@ -156,7 +156,7 @@ considérable.
 Bien sûr, je ne mène pas un combat idéologique contre la souris. Celle-ci a son
 utilité, mais ce n'est bien sûr pas dans la modification de texte.
 
-## Intgréation de l'interface système
+## Intégration de l'interface système
 
 Par exemple, on peut facilement ordonner les lignes d'un fichier en faisant
 simplement
@@ -205,7 +205,7 @@ Les nombres sont alors placés dans un ordre aléatoire. On peut ordonner le tou
 avec `sort -n`. Encore une fois, on écrit `:%!sort -n` pour obtenir la liste de
 départ ordonnée.
 
-Un autre programme très connu de l'IS est `grep`. Et bien, on peut aisément
+Un autre programme très connu de l'IS est `grep`. Eh bien, on peut aisément
 l'utiliser pour affecter le tampon mémoire courant de la même manière que dans
 l'exemple précédent. Disons qu'on ait le tampon mémoire suivant:
 
@@ -357,7 +357,7 @@ Bien que cette approche soit limitée, elle est souvent complémentaire lorsqu'o
 cherche à sauter à la définition d'un mot (la définition d'une fonction par
 exemple). Les solutions décrites plus bas permettent normalement déjà cela, mais
 dans les cas où un certain langage n'est pas pris en charge par les différents
-analyseurs syntaxique décrits plus bas, l'utilisation de ctags-universal
+analyseurs syntaxiques décrits plus bas, l'utilisation de ctags-universal
 peut-être appropriée.
 
 [ctags-universal]: https://github.com/universal-ctags/ctags
@@ -442,13 +442,13 @@ Github. En particulier, vous pouvez consulter la liste de mes greffons
 
 La particularité première de Vim est sa conception des différents modes
 d'édition (Normal, Insertion, Visuel, etc.). Ces modes ne s'arrêtent vraiment
-pas à la parcelle que j'ai exposé dans cet article. Ils sont vastes. Il y a
+pas à la parcelle que j'ai exposée dans cet article. Ils sont vastes. Il y a
 beaucoup à découvrir. Ce faisant, il n'est pas si simple de dire qu'on pourrait
 aussi bien utiliser un greffon pour Visual Studio afin d'intégrer Vim car dans
-la majeur partie des cas, il ne s'agit que d'un sous-ensemble très restreint de
+la majeure partie des cas, il ne s'agit que d'un sous-ensemble très restreint de
 fonctionnalités qui sont incluses dans ce genre de greffon. Ainsi, je préfère
 largement utiliser Vim avec ses greffons que l'inverse susmentionné. C'est
-pourquoi j'encourrage quiconque à prendre le temps de découvrir Vim.
+pourquoi j'encourage quiconque à prendre le temps de découvrir Vim.
 
 ### La courbe d'apprentissage
 
@@ -457,13 +457,13 @@ pourquoi j'encourrage quiconque à prendre le temps de découvrir Vim.
 
 ![courbe-vim](/images/vim/vim-peut-tout-faire/courbe-vim.png)
 
-Oui, la courbe est est apique (pas autant que le suggère l'image :P), mais elle
+Oui, la courbe est à pic (pas autant que le suggère l'image :P), mais elle
 vaut la peine (comme l'indique l'image cette fois-ci :P). En travaillant petit à
 petit, on y arrive.
 
 ## Références additionnelles
 
-Je renvoies le lecteur vers les référence suivantes afin qu'il en apprenne plus
+Je renvois le lecteur vers les référence suivantes afin qu'il en apprenne plus
 sur Vim:
 
 * `vimtutor`: sur la ligne de commande (après avoir installé Vim sur votre
