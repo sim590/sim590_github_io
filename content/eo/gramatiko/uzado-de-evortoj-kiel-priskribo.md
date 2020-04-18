@@ -4,7 +4,7 @@ categories       = ["Pensoj", "Rakontoj", "Gramatiko"]
 title            = "Uzado de E-vortoj kiel priskribo"
 date             = 2020-04-18T11:19:48-04:00
 enableToc        = false
-meta_image       = ""
+meta_image       = "images/pmeg-kovrilo.png"
 +++
 
 Freŝdate, mi komencis pli ofte rimarki iun uztipon de E-vortoj en variaj specoj
