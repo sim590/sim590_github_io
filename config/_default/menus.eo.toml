@@ -1,5 +1,11 @@
 
 [[main]]
+  identifier = "arkivo"
+  name = "Arkivo"
+  url = "arkivo"
+  weight = 2
+
+[[main]]
   identifier = "laborajxoj"
   name = "Mia laboraĵlisto"
   url = "showcase"
