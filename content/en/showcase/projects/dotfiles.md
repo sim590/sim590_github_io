@@ -1,5 +1,6 @@
 ---
 title: "dotfiles"
+type: "showcase"
 description: The set of files used as configuration for various software I use.
 weight: 1 # card ordering
 link: https://github.com/sim590/dotfiles/

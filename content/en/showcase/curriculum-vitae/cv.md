@@ -1,5 +1,6 @@
 ---
 title: My resume
+type: "showcase"
 description: PDF format.
 weight: 1
 link: /doc/cv/cv-en.pdf

@@ -1,5 +1,6 @@
 ---
 title: "dpaste"
+type: "showcase"
 description: Un outil de partage (type pastebin) de petit fichiers
              roulant sur [OpenDHT](http://opendht.net) (avec support pour
              chiffrement AES et GPG).

@@ -1,5 +1,6 @@
 ---
 title: "dotfiles"
+type: "showcase"
 description: La aro de dosieroj agordantaj diversaj programoj kiujn mi uzas.
 weight: 1 # card ordering
 link: https://github.com/sim590/dotfiles/

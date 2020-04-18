@@ -1,5 +1,6 @@
 ---
 title: "yauml"
+type: "showcase"
 description: Malgranda skripto por estigi UML-a diagramoj surbaze de YAML-a
              dosieroj.
 weight: 1 # card ordering

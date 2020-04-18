@@ -1,5 +1,6 @@
 ---
 title: "dotfiles"
+type: "showcase"
 description: L'ensemble des fichiers de configuration des logiciels / outils que
              j'utilise.
 weight: 1 # card ordering

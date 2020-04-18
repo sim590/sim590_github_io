@@ -1,5 +1,6 @@
 ---
 title: polyenum
+type: "showcase"
 description: Outil d’énumération de polyominos épaulant la recherche
              combinatoire sur ces objets.
 weight: 1 # card ordering

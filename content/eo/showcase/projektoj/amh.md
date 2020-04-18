@@ -1,5 +1,6 @@
 ---
 title: "amh"
+type: "showcase"
 description: Malgranda modulo redaktita en Lua por
              [AwesomeWM](http://awesome.naquadah.org/wiki/Main_Page) kiu liveras
              plurgastigantaj funkcioj.

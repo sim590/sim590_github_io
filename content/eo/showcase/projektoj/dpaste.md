@@ -1,5 +1,6 @@
 ---
 title: "dpaste"
+type: "showcase"
 description: Simpla retkopiilo (pastebin) por malpezaj datumoj (64 KB maksimume)
              uzante [OpenDHT](http://opendht.net) (kun kapableco de ĉifrado per
              AES kaj GPG).

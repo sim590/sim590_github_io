@@ -1,5 +1,6 @@
 ---
 title: Tezo de magistreco (UQÀM)
+type: "showcase"
 description: Opérations non rudimentaires de tables de hachage distribuées et
              clavardage en groupe sûr de bout en bout
 weight: 2

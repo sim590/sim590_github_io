@@ -1,5 +1,6 @@
 ---
 title: "dpaste"
+type: "showcase"
 description: A simple pastebin for light values (max 64KB) using
              [OpenDHT](http://opendht.net) (with support for AES and GPG
              encryption).

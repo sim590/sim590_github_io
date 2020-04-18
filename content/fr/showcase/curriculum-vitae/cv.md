@@ -1,5 +1,6 @@
 ---
 title: Curriculum Vitæ
+type: "showcase"
 description: Au format PDF.
 weight: 1
 link: /doc/cv/cv-fr.pdf

@@ -1,5 +1,6 @@
 ---
 title: Mia vivprotokolo
+type: "showcase"
 description: PDF-o dosierformo (franclingve).
 weight: 1
 link: /doc/cv/cv-fr.pdf

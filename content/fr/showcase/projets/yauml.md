@@ -1,5 +1,6 @@
 ---
 title: "yauml"
+type: "showcase"
 description: Outil de génération de graphe UML à partir d'un fichier de données
              YAML.
 weight: 1 # card ordering
