@@ -254,6 +254,12 @@ _fzf_complete_toto() {
 )
 ```
 
+**N.B**: Il est spécifié sur la page de documentation de Fzf que l'IPA est
+instable et change de version en version. En particulier, cela concerne la
+fonction `_fzf_complete`. Par exemple, la version du paquet Debian que j'utilise
+est telle que la fonction `_fzf_complete` ne reconnaît pas l'argument
+dédié `--`. Il faut donc simplement le retirer.
+
 ### ssh et les adresses "*.local"
 
 Comme mentionné plus tôt, la complétion par les scripts de `fzf` pour `ssh` ne
