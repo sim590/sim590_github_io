@@ -126,7 +126,7 @@ vim $(fzf -m)
 L'utilisateur peut alors sélectionner les choix multiples à l'aide de la touche
 `TAB`.
 
-## Fonctionnalités du de l'interface système
+## Fonctionnalités de l'interface système
 
 Deux fonctionnalités principales sont fournies: des touches raccourcis ainsi que
 des scripts de complétion.
