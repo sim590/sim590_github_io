@@ -6,16 +6,6 @@ date             = "2020-04-11T00:42:27-04:00"
 meta_image       = "images/fzf/fzf-logo.png"
 +++
 
----
-
-**N.B**: *Les configurations que j'ai listées dans cet article ont été
-téléversées et sont disponibles pour consultation dans mon [dépôt de fichiers de
-configurations][dotfiles].*
-
-[dotfiles]: https://github.com/sim590/dotfiles
-
----
-
 `fzf` est un programme filtrant le flux de son entrée standard par mots clefs
 fournis par l'utilisateur de manière interactive. Le filtre est du type *fuzzy*
 (d'où le nom *fzf* pour *fuzzy finder*), c'est-à-dire que les termes fournis au
@@ -32,6 +22,16 @@ Si l'utilisateur fournissait le terme `tt`, toutes les lignes seraient
 sélectionnées, puisque les sous-mots `t` et `t` se trouvent tous deux dans
 toutes les lignes. Cependant, avec le terme de recherche `oo`, seul la première
 ligne correspondrait avec le mot `toto` selon le même raisonnement.
+
+---
+
+**N.B**: *Les configurations que j'ai listées dans cet article ont été
+téléversées et sont disponibles pour consultation dans mon [dépôt de fichiers de
+configurations][dotfiles].*
+
+[dotfiles]: https://github.com/sim590/dotfiles
+
+---
 
 ## Les principales fonctionnalités
 
