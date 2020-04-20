@@ -5,4 +5,4 @@
 [submodule "themes/zzo"]
 	path = themes/zzo
 	url = https://github.com/sim590/hugo-theme-zzo
-    branch = fr-eo-lang
+    branch = i18n-eo
