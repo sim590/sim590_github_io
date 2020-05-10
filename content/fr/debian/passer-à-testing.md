@@ -101,7 +101,8 @@ apt upgrade
 ```
 
 Finalement, pour permettre à `apt` de mettre à jour certains paquets impliquant
-la suppression d'autres paquets, on doit faire:
+la suppression d'autres paquets ou l'installation de nouveaux paquets (ce que
+upgrade ne fait pas par défaut), on doit faire:
 
 ```sh
 apt dist-upgrade
