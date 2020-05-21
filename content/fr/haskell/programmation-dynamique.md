@@ -242,8 +242,8 @@ allons prendre une avenue qui diffère légèrement afin de garantir encore un
 rendement optimal.
 
 Une séquence de Collatz est une séquence de nombres générée suivant un nombre en
-entrée, appelons cet élément « racine ». Soit $g: \mathbb{N} \longrightarrow
-\mathbb{N}$ définie comme:
+entrée, appelons cet élément « racine ». Soit \\(g: \mathbb{N} \longrightarrow
+\mathbb{N}\\) définie comme:
 
 $$
 g(m) =
