@@ -61,6 +61,21 @@ fichier de configuration actuel là où il ne sera pas effectif.
 rm /etc/apt/sources.list
 ```
 
+---
+
+<div align=center>
+<b>### Mise en garde ###</b>
+</div>
+
+Je fais l'hypothèse que les fichiers de configuration sont par défaut, c.-à-d.
+que vous n'avez pas de fichier ajoutés autre comme par exemple certains fichiers
+créés après l'exécution d'instructions d'installation pour des logiciels
+externes aux serveurs Debian (pour Google Chrome par exemple). Ce faisant, si
+certains fichiers de ce genre sont présents où que vous avez des sources
+supplémentaires nécessaire pour votre système, veillez à les préserver.
+
+---
+
 Si le fichier précédent ne se trouvait pas à cet endroit au premier abord, vous
 avez possiblement une configuration divisée en plusieurs fichiers de la forme
 `/etc/apt/sources.list.d/*.list`. Si c'est le cas, veilliez à les retirer (ou
