@@ -6,8 +6,8 @@ draft:            false
 hideToc:          false
 enableToc:        true
 enableTocContent: false
-tags: ["Hypothèque", "Prêt", "Dette", "Intérêt", "Paiement bancaire", "Newton", "Pascal"]
-categories: ["Mathématiques", "Finance"]
+tags:             ["Hypothèque", "Prêt", "Dette", "Intérêt", "Paiement bancaire", "Newton", "Pascal"]
+categories:       ["Mathématiques", "Finance"]
 meta_image:       images/maths/newton.jpg
 ---
 
