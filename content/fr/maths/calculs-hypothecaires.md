@@ -65,11 +65,11 @@ $$
 
 Bien sûr! Puisque la seconde année, le montant de prêt hypothécaire restante
 était \\(H_0(i+1) - P\\). On voit bien que cette quantité a été multipliée par
-\\((i+1)\\), comme c'était le cas pour \\(H_0\\) la première année. N.B: ici,
-\\(P\\) ne vaut pas la même quantité que dans le scénario où on paie tout en une
-année. Bien sûr, là le montant est un peu plus gros que la moitié de l'ancien
-montant pour \\(P\\).  Bref, si on continuait le procédé jusqu'à \\(n\\) années,
-on aurait alors:
+\\((i+1)\\), comme c'était le cas pour \\(H_0\\) la première année. Notez bien
+qu'ici, \\(P\\) ne vaut pas la même quantité que dans le scénario où on paie
+tout en une année. Bien sûr, le montant est un peu plus gros que la moitié de
+l'ancien montant pour \\(P\\). Bref, si on continuait le procédé jusqu'à \\(n\\)
+années, on aurait alors:
 
 $$
 (...(H_0(i+1) - P)(i+1) - P ...)(i+1) - P = 0
@@ -155,19 +155,20 @@ par 12.
 
 Si on a un hypothèque de 200000 dollars avec un taux d'intérêt de 2% par années
 et qu'on souhaite régler le paiement de la dette en 25 ans, alors on aura un
-paiement régulier par année à faire de:
+paiement régulier par mois à faire de:
 
 $$
 \begin{align}
-  P &= 200000\frac{1 - (1.02)^{-1}}{(1.02)^{-1} - (1.02)^{-26}}\\\\
-    &= 10244.43
+  P &= 200000 \cdot
+       \frac{1 - 12\cdot(12.02)^{-1}}{12\cdot(12.02)^{-1} - 12^{301}\cdot(12.02)^{-301}}\\\\
+    &= 847.71
 \end{align}
 $$
 
 Voilà qui est bien! Ceci dit, connaître le paiement bancaire ne donne pas la
 totalité de l'information intéressante. En effet, soit \\(y_k\\) l'intérêt à
 payer et \\(x_k\\) le montant de prêt hypothécaire payé, tous deux
-respectivement la \\(k^{e}\\) année. On a bien sûr la relation suivante pour
+respectivement le \\(k^{e}\\) mois. On a bien sûr la relation suivante pour
 tout \\(k\\):
 
 $$
@@ -176,95 +177,99 @@ $$
 
 Ce faisant, même si on connaît \\(P\\), on ne sait pas encore quelle portion va
 dans les intérêts à payer et quelle portion va dans le montant de prêt
-hypothécaire. Puisque le montant d'hypothèque réduit à chaque année, il est
+hypothécaire. Puisque le montant d'hypothèque réduit à chaque mois, il est
 clair que la portion d'intérêt dans le paiement régulier \\(P\\) va descendre au
 fil du temps. Mais comment connaître \\(x_k\\) et \\(y_k\\)? Plus
-particulièrement, les sommes payées après \\(n\\) années sont d'un grand intérêt
+particulièrement, les sommes payées après \\(n\\) mois sont d'un grand intérêt
 (sans jeu de mot :) )!
 
 ## Portion d'hypothèque du paiement bancaire
 
 Dans la dernière section, nous avons déterminé le calcul pour le paiement
-bancaire régulier à faire par année pour régler sa dette après \\(n\\) années.
-Qu'en est-il de la somme d'hypothèque payée après \\(n\\) années? Bien sûr, si
-on effectue notre paiement sur 25 ans et qu'on s'interroge à connaître
-\\(\sum_{k=1}^{25} x_k\\), il est clair que cela est équivalent à le montant de
-prêt hypothécaire final \\(H_0\\) puisqu'on a réglé \\(P\\) de sorte qu'on ait
-tout payé après 25 ans. Mais, si on s'intéressait plutôt à le montant de prêt
-hypothécaire payée après 5 ans pour un paiement qui s'effectue sur 25 ans?
+bancaire régulier à faire par mois pour régler sa dette après \\(m\\) mois.
+Qu'en est-il de la somme d'hypothèque payée après \\(m\\) mois? Bien sûr, si on
+effectue notre paiement sur 25 ans et qu'on s'interroge à connaître
+\\(\sum_{k=1}^{m} x_k\\) pour \\(m = 25 \cdot 12\\), il est clair que cela est
+équivalent au montant de prêt hypothécaire final \\(H_0\\) puisqu'on a réglé
+\\(P\\) de sorte qu'on ait tout payé après 25 ans. Mais, si on s'intéressait
+plutôt au montant de prêt hypothécaire payée après 5 ans pour un paiement qui
+s'effectue sur 25 ans?
 
-Premièrement, en reprenant le contexte de la section précédente, on peut écrire
+Premièrement, notons le pourcentage d'intérêt proportionnel par mois par
+\\(\iota\\). En reprenant le contexte de la section précédente, on peut écrire
 que:
 
 $$
-x_1 = P - iH_0
+x_1 = P - \iota{}H_0
 $$
 
-puisque \\(x_1\\) étant le montant de prêt hypothécaire payé la première année,
-on trouve que le paiement bancaire total retranché de l'intérêt sur la première
-année, c.-à-d.  l'intérêt appliquée sur le montant de prêt hypothécaire
-\\(H_0\\), va nécessairement nous laisser avec la valeur d'hypothèque payée
-cette année. Bien, mais on aimerait connaître \\(x_1, x_2, ..., x_n\\)...
-Essayons de voir ce qui se passe avec \\(x_2\\):
+puisque \\(x_1\\) étant le montant de prêt hypothécaire payé le premier mois,
+on trouve que le paiement bancaire total retranché de l'intérêt sur le premier
+mois, c.-à-d.  l'intérêt appliquée sur le montant de prêt hypothécaire
+\\(H_0\\), va nécessairement nous laisser avec la valeur d'hypothèque payée ce
+mois-ci. Bien, mais on aimerait connaître \\(x_1, x_2, ..., x_m\\)... Essayons
+de voir ce qui se passe avec \\(x_2\\):
 
 $$
-x_2 = P - iH_1
+x_2 = P - \iota{}H_1
 $$
 
 Or, on sait que  \\(H_1 = H_0 - x_1\\) puisque \\(x_1\\) est la première portion
-d'hypothèque payée la première année qu'on retranche à \\(H_0\\). On peut donc
+d'hypothèque payée le premier mois qu'on retranche à \\(H_0\\). On peut donc
 écrire:
 
 $$
-x_2 = P - i(H_0 - x_1) = P - i(H_0 - P + iH_0)
+x_2 = P - \iota{}(H_0 - x_1) = P - \iota{}(H_0 - P + \iota{}H_0)
 $$
 
 En réarrangeant le tout, on trouve:
 
 $$
-x_2 = P(1+i) - iH_0(1+i)
+x_2 = P(1+\iota{}) - \iota{}H_0(1+\iota{})
 $$
 
 Se peut-il qu'on tombera sur une formule récurrente cette fois-ci encore? :)
 Essayons de voir ce que \\(x_3\\) nous réserve:
 
 $$
-x_3 = P - i(H_0 - x_2 - x_1)
+x_3 = P - \iota{}(H_0 - x_2 - x_1)
 $$
 
-Évidemment, \\(H_0 - x_2 - x_1\\) est le montant de prêt hypothécaire la 3e
-année, donc si on y multiplie le pourcentage d'intérêt et qu'on retranche cette
-valeur à \\(P\\), on va trouver le montant de prêt hypothécaire payé la
-\\(3^{e}\\) année. En faisant comme pour \\(x_2\\), on retrouve l'expression
-suivante:
+Évidemment, \\(H_0 - x_2 - x_1\\) est le montant de prêt hypothécaire le
+\\(3^{e}\\) mois, donc si on y multiplie le pourcentage d'intérêt et qu'on
+retranche cette valeur à \\(P\\), on va trouver le montant de prêt hypothécaire
+payé le \\(3^{e}\\) mois. En faisant comme pour \\(x_2\\), on retrouve
+l'expression suivante:
 
 $$
-x_3 = P - i (H_0 - (P(1+i) - iH_0(1+i)) - (P - iH_0))
+x_3 = P - \iota{} (H_0 - (P(1+\iota{}) - \iota{}H_0(1+\iota{})) - (P - \iota{}H_0))
 $$
 
-On peut alors réécrire tout comme:
+On peut alors réécrire le tout comme:
 
 $$
-x_3 = P(1+2i+i^2) - iH_0(1+2i+i^2)
+x_3 = P(1+2\iota{}+\iota{}^2) - \iota{}H_0(1+2\iota{}+\iota{}^2)
 $$
 
 Par le même procédé, on trouve:
 
 $$
-x_4 = P(1+3i+3i^2+i^3) - iH_0(1+3i+3i^2+i^3)
+x_4 = P(1+3\iota{}+3\iota{}^2+\iota{}^3)
+      - \iota{}H_0(1+3\iota{}+3\iota{}^2+\iota{}^3)
 $$
 
 et
 
 $$
-x_5 = P(1+4i+6i^2+4i^3+i^4) - iH_0(1+4i+6i^2+4i^3+i^4)
+x_5 = P(1+4\iota{}+6\iota{}^2+4\iota{}^3+\iota{}^4)
+      - \iota{}H_0(1+4\iota{}+6\iota{}^2+4\iota{}^3+\iota{}^4)
 $$
 
 Clairement, il y a un motif qui s'installe dans ces expressions et qui les lie
 toutes entre elles. En effet, on peut remarquer deux choses liant \\(x_1, x_2,
 x_3, x_4\\) et \\(x_5\\):
 
-* l'exposant du polynôme de l'expression \\(x_k\\) est de degré \\(k-1\\).
+* le polynôme de l'expression \\(x_k\\) est de degré \\(k-1\\).
 * les coefficients de chacun des termes du polynôme respecte une certaine
   symétrie. D'abord, \\(1\\), ensuite \\(1 --- 1\\), puis \\(1 --- 2 --- 1\\),
   \\(1 --- 3 --- 3 --- 1\\) et enfin \\(1 --- 4 --- 6 --- 4 --- 1\\). La suite
@@ -272,8 +277,9 @@ x_3, x_4\\) et \\(x_5\\):
   gauche à droite ou de droite à gauche et elle est la même.
 
 Généraliser le premier point est rapide, il s'agit d'une simple boucle, mais
-pour ce qui est du second point, il s'agit là d'un motif connu! On le retrouve
-dans le fameux [Triangle de Pascal][tripascal]:
+pour ce qui est du second point, c'est plus compliqué. Heureusement, il s'agit
+là d'un motif connu! On le retrouve dans le fameux [Triangle de
+Pascal][tripascal]:
 
 ```
 1
@@ -313,37 +319,41 @@ ou encore \\(1 --- 2 --- 1\\). Ce faisant, on peut donc réécrire notre
 expression pour \\(x_5\\) comme:
 
 $$
-x_5 = (P - iH_0)\left(
-  {4 \choose 0}+{4 \choose 1}i+{4 \choose 2}i^2+{4 \choose 3}i^3+{4 \choose 4}i^4
+x_5 = (P - \iota{}H_0)\left(
+  {4 \choose 0}
+  +{4 \choose 1}\iota{}
+  +{4 \choose 2}\iota{}^2
+  +{4 \choose 3}\iota{}^3
+  +{4 \choose 4}\iota{}^4
 \right)
 $$
 
-où \\(P - iH_0\\) est la factorisation de \\(P\\) et \\(iH_0\\) tous deux
+où \\(P - \iota{}H_0\\) est la factorisation de \\(P\\) et \\(\iota{}H_0\\) tous deux
 multipliés au même polynôme. Par conséquent, on a de façon plus succincte:
 
 $$
-x_5 = (P - iH_0)\sum_{k=0}^{4} {4 \choose k}i^{k}
+x_5 = (P - \iota{}H_0)\sum_{k=0}^{4} {4 \choose k}\iota{}^{k}
 $$
 
 Plus généralement, on écrira donc:
 
 $$
-x_n = (P - iH_0)\sum_{k=0}^{n-1} {n-1 \choose k}i^{k}
+x_m = (P - \iota{}H_0)\sum_{k=0}^{n-1} {n-1 \choose k}\iota{}^{k}
 $$
 
-Or, l'expression \\(\sum_{k=0}^{n-1} {n-1 \choose k}i^{k}\\) est très connue! Il
+Or, l'expression \\(\sum_{k=0}^{n-1} {n-1 \choose k}\iota{}^{k}\\) est très connue! Il
 s'agit d'un [binôme de Newton][binewton] qui correspond à l'expression
-\\((i+1)^{n-1}\\). Ce faisant, on peut réécrire \\(x_n\\) comme suit:
+\\((\iota{}+1)^{n-1}\\). Ce faisant, on peut réécrire \\(x_m\\) comme suit:
 
 ---
 
 $$
-x_n = (P - iH_0)(i+1)^{n-1}
+x_m = (P - \iota{}H_0)(\iota{}+1)^{n-1}
 $$
 
 ---
 
-**Exemple!**
+### Exemple
 
 En reprenant les hypothèses de l'exemple précédent, on a:
 
@@ -351,23 +361,19 @@ $$
 \begin{cases}
 H_0 &= 200000 \\\\
 i &= 0.02 \\\\
-P &= 10244.43
+P &= 847.71
 \end{cases}
 $$
 
-Le paiement d'hypothèque la première année serait donc:
+Ce faisant, l'intérêt par mois est \\(\iota = \frac{i}{12}\\). Le paiement
+d'hypothèque le premier mois serait donc:
 
 $$
-x_1 = (P - iH_0)(i+1)^{1-1} = P - iH_0 = 10244.43 - 0.02 \cdot 200000 = 6244.43
+x_1 = (P - \iota{}H_0)(\iota{}+1)^{1-1}
+    = P - \iota{}H_0
+    = 847.71 - \frac{0.02}{12} \cdot 200000
+    = 532.77
 $$
-
-Ce faisant, rapporté sur 12 mois, on trouvera un paiement d'hypothèque de
-520.37. Pour comparaison, le paiement bancaire mensuel est de 853.70.
-
-**Remarque**: Comme mentionné [plus haut]({{<ref "#paiement-par-mois" >}}), pour
-faire un calcul mensuel, on doit ajuster le calcul pour \\(P\\) en utilisant
-plutôt \\(m\\) le nombre de mois et un taux d'intérêt mensuel. Ce faisant, le
-calcul mensuel ci-haut est simplement pour fournir un ordre de comparaison.
 
 **Remarque**: Dans le calcul de l'exemple, le lecteur devrait remarquer qu'à
 droite de la seconde égalité, l'expression de \\(x_1\\) était ramenée à sa plus
@@ -376,13 +382,13 @@ simple forme, c.-à-d. tel que décrite au départ plus haut dans le document co
 bon fonctionnement de la formule, du moins pour le cas \\(n=1\\).
 
 Voilà qui est bien. Cependant, je dois rappeler au lecteur que cette expression
-ne nous fournit que la valeur du montant de prêt hypothécaire à payer la
-\\(n^{e}\\) année. Il serait intéressant d'obtenir la somme d'hypothèque payée
-au bout de \\(n\\) années. Notons cette somme au bout de \\(k\\) années
-\\(X_n\\). Cela correspond donc à l'expression suivante:
+ne nous fournit que la valeur du montant de prêt hypothécaire à payer le
+\\(m^{e}\\) mois. Il serait intéressant d'obtenir la somme d'hypothèque payée
+au bout de \\(m\\) mois. Notons cette somme au bout de \\(m\\) mois
+\\(X_m\\). Cela correspond donc à l'expression suivante:
 
 $$
-X_n = \sum_{k=1}^n x_k = (P - iH_0) \sum_{k=1}^n (i+1)^{k-1}
+X_m = \sum_{k=1}^m x_k = (P - \iota{}H_0) \sum_{k=1}^m (\iota{}+1)^{k-1}
 $$
 
 Cette expression se résoud finalement à:
@@ -390,19 +396,21 @@ Cette expression se résoud finalement à:
 ---
 
 $$
-X_n = (P - iH_0) \frac{(i+1)^n - 1}{i}
+X_m = (P - \iota{}H_0) \frac{(\iota{}+1)^m - 1}{\iota{}}
 $$
 
 ---
 
 Vérifions! Avec les mêmes hypothèses que précédemment, on devrait arriver, pour
-\\(n=25\\), à \\(H_0 = 200000\\) puisqu'après 25 ans, on aura tout payé:
+\\(m=300\\), à \\(H_0 = 200000\\) puisqu'après 25 ans (300 mois), on aura tout
+payé:
 
 $$
-(10244.43 - 0.02\cdot 200000) \frac{(0.02+1)^25 - 1}{0.02} = 200010.96
+(847.71 - \frac{0.02}{12}\cdot 200000) \frac{\left(\frac{0.02}{12}+1\right)^{300}-1}{\frac{0.02}{12}}
+= 200000.51
 $$
 
-L'écart de 11$ ici s'explique par les chiffres que j'ai arrondis pour l'écriture.
+L'écart de 0.51$ ici s'explique par les chiffres que j'ai arrondis pour l'écriture.
 En gardant une plus grande précision sur le nombre de chiffres après la virgule,
 on arriverait évidemment à \\(H_0 = 200000\\). Faites le test!
 
@@ -421,24 +429,24 @@ P = y_k + x_k,\quad \text{pour tout}\ k
 $$
 
 Ce faisant, comme on connait \\(P\\) et \\(x_k\\), on a donc aussi \\(y_k = P -
-x_k\\). Notons la somme d'intérêt payée au bout de \\(k\\) années \\(Y_n\\). Il
+x_k\\). Notons la somme d'intérêt payée au bout de \\(m\\) mois \\(Y_m\\). Il
 s'en suit que:
 
 $$
 \begin{align}
-Y_n = \sum_{k=1}^n y_k &= \sum_{k=1}^n \left(P - x_k\right)\\\\
-                       &= \sum_{k=1}^n P - \sum_{k=1}^n x_k\\\\
-                       &= nP - \sum_{k=1}^n x_k\\\\
+Y_m = \sum_{k=1}^m y_k &= \sum_{k=1}^m \left(P - x_k\right)\\\\
+                       &= \sum_{k=1}^m P - \sum_{k=1}^m x_k\\\\
+                       &= mP - \sum_{k=1}^m x_k\\\\
 \end{align}
 $$
 
 Finalement, comme on connaît l'expression de la somme sur \\(x_k\\), c.-à-d.
-\\(X_n\\), on écrit:
+\\(X_m\\), on écrit:
 
 ---
 
 $$
-Y_n = nP - (P - iH_0) \frac{(i+1)^n - 1}{i}
+Y_m = mP - (P - \iota{}H_0) \frac{(\iota{}+1)^m - 1}{\iota{}}
 $$
 
 ---
@@ -451,12 +459,14 @@ $$
 \begin{cases}
 H_0 &= 200000 \\\\
 i &= 0.02 \\\\
-P &= 10244.43
+P &= 847.71
 \end{cases}
 $$
 
 le lecteur est invité à calculer la somme d'intérêt payée après 5 ans,
 c'est-à-dire calculer \\(Y_5\\).
+
+**Rappel**: l'intérêt par mois est donnée par \\(\iota{} = \frac{i}{12}\\).
 
 ## Conclusion
 
