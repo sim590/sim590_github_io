@@ -132,7 +132,26 @@ Et voilà! On a maintenant une formule exacte du paiement bancaire à effectuer 
 la banque à chaque année si on souhaite régler le paiement de notre hypothèque
 \\(H_0\\) après \\(n\\) années suivant le taux d'intérêt \\(i\\).
 
-**Exemple!**
+### Paiement par mois
+
+Cependant, *la réalité est un peu différente*. On calcule normalement l'intérêt
+chaque mois. Ce faisant, pour déterminer le paiement mensuel, on devrait plutôt
+faire le même calcul, mais pour \\(m\\) le nombre de mois sur lequel le prêt
+sera remboursé. Par contre, il faudra ajuster le taux d'intérêt en proportion à
+ce nouveau calcul. On pourrait donc obtenir la formule suivante:
+
+---
+
+$$
+P = H_0\frac{1 - r}{r - r^{m+1}},\quad\text{avec } r = \frac{12}{i+12}
+$$
+
+---
+
+Puisque le taux d'intérêt est normalement donné sur l'année, on divise celui-ci
+par 12.
+
+### Exemple
 
 Si on a un hypothèque de 200000 dollars avec un taux d'intérêt de 2% par années
 et qu'on souhaite régler le paiement de la dette en 25 ans, alors on aura un
@@ -144,8 +163,6 @@ $$
     &= 10244.43
 \end{align}
 $$
-
-Si on rapporte ça sur 12 mois, on aura donc un paiement mensuel de 853.70.
 
 Voilà qui est bien! Ceci dit, connaître le paiement bancaire ne donne pas la
 totalité de l'information intéressante. En effet, soit \\(y_k\\) l'intérêt à
@@ -347,7 +364,12 @@ $$
 Ce faisant, rapporté sur 12 mois, on trouvera un paiement d'hypothèque de
 520.37. Pour comparaison, le paiement bancaire mensuel est de 853.70.
 
-**Remarque**: dans le calcul de l'exemple, le lecteur devrait remarquer qu'à
+**Remarque**: Comme mentionné [plus haut]({{<ref "#paiement-par-mois" >}}), pour
+faire un calcul mensuel, on doit ajuster le calcul pour \\(P\\) en utilisant
+plutôt \\(m\\) le nombre de mois et un taux d'intérêt mensuel. Ce faisant, le
+calcul mensuel ci-haut est simplement pour fournir un ordre de comparaison.
+
+**Remarque**: Dans le calcul de l'exemple, le lecteur devrait remarquer qu'à
 droite de la seconde égalité, l'expression de \\(x_1\\) était ramenée à sa plus
 simple forme, c.-à-d. tel que décrite au départ plus haut dans le document comme
 \\(P - iH_0\\). Cette étape a explicitement été laissé afin qu'on remarque le
