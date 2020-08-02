@@ -19,7 +19,7 @@ Je regarde les maisons et condos depuis un certain temps déjà, histoire de
 sentir un peu ce que l'achat implique pour un emprunteur. J'ai pris la peine de
 rechercher différentes informations comme les conditions et les options pour une
 assurance hypothèque, les frais associés à l'habitation (charge de copropriété,
-taxe scolaire, etc.) ainsi que les taux d'intérêt associé à un prêt. J'ai donc
+taxe scolaire, etc.) ainsi que les taux d'intérêt associés à un prêt. J'ai donc
 voulu mettre tout cela en commun afin d'avoir un aperçu de mes paiements par
 mois ainsi que ce que cela engendre sur une période plus longue comme 5, 10 ou
 même 25 ans. J'ai ainsi eu l'occasion de faire certains calculs qui seront
@@ -33,15 +33,16 @@ des avantages et inconvénients d'acheter une propriété versus louer un logeme
 
 ## Paiements bancaires
 
-Admettons qu'on ait un prêt hypothécaire octroyé par une banque. Ce prêt
+Admettons qu'on ait un prêt octroyé par une banque pour une habitation. Ce prêt
 s'appelle «prêt hypothécaire». Celui-ci a une valeur qui varie dans le temps
 puisqu'on fait des paiements mensuels afin de le réduire. Notons \\(H_k\\) le
 montant du prêt hypothécaire courant après la \\(k^{e}\\) année, c.-à-d. ce qui
 reste à payer après \\(k\\) années de paiement. Le montant du prêt sera donc
 noté \\(H_0\\).  Notons maintenant \\(P\\) le paiement bancaire à faire par
 année pour arriver à payer notre prêt au fil des années. Il faut bien sûr
-considérer aussi finalement l'intérêt sur le prêt. Notons-le \\(i\\). De cela,
-si on souhaitait payer notre prêt en une seule année, on pourrait alors écrire:
+considérer aussi finalement l'intérêt sur le prêt. Notons-le pourcentage associé
+à l'intérêt par année \\(i\\). De cela, si on souhaitait payer notre prêt en une
+seule année, on pourrait alors écrire:
 
 $$
 H_0 + iH_0 = P
@@ -63,7 +64,7 @@ $$
 (H_0(i+1) - P)(i+1) - P = 0
 $$
 
-Bien sûr! Puisque la seconde année, le montant de prêt hypothécaire restante
+Bien sûr! Puisque la seconde année, le montant de prêt hypothécaire restant
 était \\(H_0(i+1) - P\\). On voit bien que cette quantité a été multipliée par
 \\((i+1)\\), comme c'était le cas pour \\(H_0\\) la première année. Notez bien
 qu'ici, \\(P\\) ne vaut pas la même quantité que dans le scénario où on paie
@@ -104,9 +105,9 @@ H_0 = P \left\(
   \right\)
 $$
 
-Notons maintenant l'expression \\(\frac{1}{i+1}\\) par \\(r\\).  La série qui se
-trouve entre parenthèse est bien connue, il s'agit de la série géométrique. Il
-est facile à démontrer qu'elle équivaut à l'expression suivante:
+Notons maintenant l'expression \\(\frac{1}{i+1}\\) par \\(r\\).  La série
+(partielle) qui se trouve entre parenthèse est bien connue, il s'agit de la série
+géométrique. Il est facile à démontrer qu'elle équivaut à l'expression suivante:
 
 $$
 \frac{r - r^{n+1}}{1 - r}
@@ -196,8 +197,8 @@ plutôt au montant de prêt hypothécaire payée après 5 ans pour un paiement q
 s'effectue sur 25 ans?
 
 Premièrement, notons le pourcentage d'intérêt proportionnel par mois par
-\\(\iota\\). En reprenant le contexte de la section précédente, on peut écrire
-que:
+\\(\iota\\). Il est défini par \\(\frac{i}{12}\\). En reprenant le contexte
+de la section précédente, on peut écrire que:
 
 $$
 x_1 = P - \iota{}H_0
@@ -274,7 +275,7 @@ x_3, x_4\\) et \\(x_5\\):
   symétrie. D'abord, \\(1\\), ensuite \\(1 --- 1\\), puis \\(1 --- 2 --- 1\\),
   \\(1 --- 3 --- 3 --- 1\\) et enfin \\(1 --- 4 --- 6 --- 4 --- 1\\). La suite
   des coefficients constitue donc un palindrome, c.-à-d. qu'on peut la lire de
-  gauche à droite ou de droite à gauche et elle est la même.
+  gauche à droite ou de droite à gauche et la lecture est la même.
 
 Généraliser le premier point est rapide, il s'agit d'une simple boucle, mais
 pour ce qui est du second point, c'est plus compliqué. Heureusement, il s'agit
@@ -378,8 +379,8 @@ $$
 **Remarque**: Dans le calcul de l'exemple, le lecteur devrait remarquer qu'à
 droite de la seconde égalité, l'expression de \\(x_1\\) était ramenée à sa plus
 simple forme, c.-à-d. tel que décrite au départ plus haut dans le document comme
-\\(P - iH_0\\). Cette étape a explicitement été laissé afin qu'on remarque le
-bon fonctionnement de la formule, du moins pour le cas \\(n=1\\).
+\\(P - \iota{}H_0\\). Cette étape a explicitement été laissé afin qu'on remarque
+le bon fonctionnement de la formule, du moins pour le cas \\(m=1\\).
 
 Voilà qui est bien. Cependant, je dois rappeler au lecteur que cette expression
 ne nous fournit que la valeur du montant de prêt hypothécaire à payer le
