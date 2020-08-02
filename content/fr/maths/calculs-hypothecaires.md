@@ -28,20 +28,20 @@ calculés. En particulier, je veux exposer trois calculs clefs dans la prévisio
 des avantages et inconvénients d'acheter une propriété versus louer un logement:
 
 * le paiement bancaire régulier (hypothèque et intérêt);
-* l'hypothèque payée sur \\(n\\) années;
+* le montant de prêt hypothécaire payée sur \\(n\\) années;
 * et l'intérêt sur le prêt payé sur \\(n\\) années.
 
 ## Paiements bancaires
 
 Admettons qu'on ait un prêt hypothécaire octroyé par une banque. Ce prêt
-s'appelle «hypothèque». Celui-ci a une valeur qui varie dans le temps puisqu'on
-fait des paiements mensuels afin de le réduire. Notons \\(H_k\\) l'hypothèque
-courant après la \\(k^{e}\\) année, c.-à-d. ce qui reste à payer après \\(k\\)
-années de paiement. Le montant du prêt sera donc noté \\(H_0\\). Notons
-maintenant \\(P\\) le paiement bancaire à faire par année pour arriver à payer notre
-prêt au fil des années. Il faut bien sûr considérer aussi finalement l'intérêt
-sur le prêt. Notons-le \\(i\\). De cela, si on souhaitait payer notre prêt en
-une seule année, on pourrait alors écrire:
+s'appelle «prêt hypothécaire». Celui-ci a une valeur qui varie dans le temps
+puisqu'on fait des paiements mensuels afin de le réduire. Notons \\(H_k\\) le
+montant du prêt hypothécaire courant après la \\(k^{e}\\) année, c.-à-d. ce qui
+reste à payer après \\(k\\) années de paiement. Le montant du prêt sera donc
+noté \\(H_0\\).  Notons maintenant \\(P\\) le paiement bancaire à faire par
+année pour arriver à payer notre prêt au fil des années. Il faut bien sûr
+considérer aussi finalement l'intérêt sur le prêt. Notons-le \\(i\\). De cela,
+si on souhaitait payer notre prêt en une seule année, on pourrait alors écrire:
 
 $$
 H_0 + iH_0 = P
@@ -63,12 +63,13 @@ $$
 (H_0(i+1) - P)(i+1) - P = 0
 $$
 
-Bien sûr! Puisque la seconde année, l'hypothèque restante était \\(H_0(i+1) -
-P\\). On voit bien que cette quantité a été multipliée par \\((i+1)\\), comme
-c'était le cas pour \\(H_0\\) la première année. N.B: ici, \\(P\\) ne vaut pas
-la même quantité que dans le scénario où on paie tout en une année. Bien sûr, là
-le montant est un peu plus gros que la moitié de l'ancien montant pour \\(P\\).
-Bref, si on continuait le procédé jusqu'à \\(n\\) années, on aurait alors:
+Bien sûr! Puisque la seconde année, le montant de prêt hypothécaire restante
+était \\(H_0(i+1) - P\\). On voit bien que cette quantité a été multipliée par
+\\((i+1)\\), comme c'était le cas pour \\(H_0\\) la première année. N.B: ici,
+\\(P\\) ne vaut pas la même quantité que dans le scénario où on paie tout en une
+année. Bien sûr, là le montant est un peu plus gros que la moitié de l'ancien
+montant pour \\(P\\).  Bref, si on continuait le procédé jusqu'à \\(n\\) années,
+on aurait alors:
 
 $$
 (...(H_0(i+1) - P)(i+1) - P ...)(i+1) - P = 0
@@ -148,19 +149,21 @@ Si on rapporte ça sur 12 mois, on aura donc un paiement mensuel de 853.70.
 
 Voilà qui est bien! Ceci dit, connaître le paiement bancaire ne donne pas la
 totalité de l'information intéressante. En effet, soit \\(y_k\\) l'intérêt à
-payer et \\(x_k\\) l'hypothèque payé, tous deux respectivement la \\(k^{e}\\)
-année. On a bien sûr la relation suivante pour tout \\(k\\):
+payer et \\(x_k\\) le montant de prêt hypothécaire payé, tous deux
+respectivement la \\(k^{e}\\) année. On a bien sûr la relation suivante pour
+tout \\(k\\):
 
 $$
 P = y_k + x_k
 $$
 
 Ce faisant, même si on connaît \\(P\\), on ne sait pas encore quelle portion va
-dans les intérêts à payer et quelle portion va dans l'hypothèque. Puisque le
-montant d'hypothèque réduit à chaque année, il est clair que la portion
-d'intérêt dans le paiement régulier \\(P\\) va descendre au fil du temps. Mais
-comment connaître \\(x_k\\) et \\(y_k\\)? Plus particulièrement, les sommes
-payées après \\(n\\) années sont d'un grand intérêt (sans jeu de mot :) )!
+dans les intérêts à payer et quelle portion va dans le montant de prêt
+hypothécaire. Puisque le montant d'hypothèque réduit à chaque année, il est
+clair que la portion d'intérêt dans le paiement régulier \\(P\\) va descendre au
+fil du temps. Mais comment connaître \\(x_k\\) et \\(y_k\\)? Plus
+particulièrement, les sommes payées après \\(n\\) années sont d'un grand intérêt
+(sans jeu de mot :) )!
 
 ## Portion d'hypothèque du paiement bancaire
 
@@ -168,10 +171,10 @@ Dans la dernière section, nous avons déterminé le calcul pour le paiement
 bancaire régulier à faire par année pour régler sa dette après \\(n\\) années.
 Qu'en est-il de la somme d'hypothèque payée après \\(n\\) années? Bien sûr, si
 on effectue notre paiement sur 25 ans et qu'on s'interroge à connaître
-\\(\sum_{k=1}^25 x_k\\), il est clair que cela est équivalent à l'hypothèque
-final \\(H_0\\) puisqu'on a réglé \\(P\\) de sorte qu'on ait tout payé après 25
-ans. Mais, si on s'intéressait plutôt à l'hypothèque payée après 5 ans pour un
-paiement qui s'effectue sur 25 ans?
+\\(\sum_{k=1}^25 x_k\\), il est clair que cela est équivalent à le montant de
+prêt hypothécaire final \\(H_0\\) puisqu'on a réglé \\(P\\) de sorte qu'on ait
+tout payé après 25 ans. Mais, si on s'intéressait plutôt à le montant de prêt
+hypothécaire payée après 5 ans pour un paiement qui s'effectue sur 25 ans?
 
 Premièrement, en reprenant le contexte de la section précédente, on peut écrire
 que:
@@ -180,11 +183,12 @@ $$
 x_1 = P - iH_0
 $$
 
-puisque \\(x_1\\) étant l'hypothèque payé la première année, on trouve que le
-paiement bancaire total retranché de l'intérêt sur la première année, c.-à-d.
-l'intérêt appliquée sur l'hypothèque \\(H_0\\), va nécessairement nous laisser
-avec la valeur d'hypothèque payée cette année. Bien, mais on aimerait connaître
-\\(x_1, x_2, ..., x_n\\)... Essayons de voir ce qui se passe avec \\(x_2\\):
+puisque \\(x_1\\) étant le montant de prêt hypothécaire payé la première année,
+on trouve que le paiement bancaire total retranché de l'intérêt sur la première
+année, c.-à-d.  l'intérêt appliquée sur le montant de prêt hypothécaire
+\\(H_0\\), va nécessairement nous laisser avec la valeur d'hypothèque payée
+cette année. Bien, mais on aimerait connaître \\(x_1, x_2, ..., x_n\\)...
+Essayons de voir ce qui se passe avec \\(x_2\\):
 
 $$
 x_2 = P - iH_1
@@ -211,10 +215,11 @@ $$
 x_3 = P - i(H_0 - x_2 - x_1)
 $$
 
-Évidemment, \\(H_0 - x_2 - x_1\\) est l'hypothèque la 3e année, donc si on y
-multiplie le pourcentage d'intérêt et qu'on retranche cette valeur à \\(P\\), on
-va trouver l'hypothèque payé la \\(3^{e}\\) année. En faisant comme pour
-\\(x_2\\), on retrouve l'expression suivante:
+Évidemment, \\(H_0 - x_2 - x_1\\) est le montant de prêt hypothécaire la 3e
+année, donc si on y multiplie le pourcentage d'intérêt et qu'on retranche cette
+valeur à \\(P\\), on va trouver le montant de prêt hypothécaire payé la
+\\(3^{e}\\) année. En faisant comme pour \\(x_2\\), on retrouve l'expression
+suivante:
 
 $$
 x_3 = P - i (H_0 - (P(1+i) - iH_0(1+i)) - (P - iH_0))
@@ -349,10 +354,10 @@ simple forme, c.-à-d. tel que décrite au départ plus haut dans le document co
 bon fonctionnement de la formule, du moins pour le cas \\(n=1\\).
 
 Voilà qui est bien. Cependant, je dois rappeler au lecteur que cette expression
-ne nous fournit que la valeur de l'hypothèque à payer la \\(n^{e}\\) année. Il
-serait intéressant d'obtenir la somme d'hypothèque payée au bout de \\(n\\)
-années. Notons cette somme au bout de \\(k\\) années \\(X_n\\). Cela correspond
-donc à l'expression suivante:
+ne nous fournit que la valeur de le montant de prêt hypothécaire à payer la
+\\(n^{e}\\) année. Il serait intéressant d'obtenir la somme d'hypothèque payée
+au bout de \\(n\\) années. Notons cette somme au bout de \\(k\\) années
+\\(X_n\\). Cela correspond donc à l'expression suivante:
 
 $$
 X_n = \sum_{k=1}^n x_k = (P - iH_0) \sum_{k=1}^n (i+1)^{k-1}
@@ -379,8 +384,8 @@ L'écart de 11$ ici s'explique par les chiffres que j'ai arrondis pour l'écritu
 En gardant une plus grande précision sur le nombre de chiffres après la virgule,
 on arriverait évidemment à \\(H_0 = 200000\\). Faites le test!
 
-Maintenant qu'on a l'hypothèque payé, on aimerait aussi avoir la somme d'intérêt
-payé!
+Maintenant qu'on a le montant de prêt hypothécaire payé, on aimerait aussi avoir
+la somme d'intérêt payé!
 
 [tripascal]: https://fr.wikipedia.org/wiki/Triangle_de_Pascal
 [binewton]: https://fr.wikipedia.org/wiki/Formule_du_bin%C3%B4me_de_Newton
