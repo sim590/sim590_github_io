@@ -466,7 +466,7 @@ $$
 le lecteur est invité à calculer la somme d'intérêt payée après 5 ans,
 c'est-à-dire calculer \\(Y_5\\).
 
-**Rappel**: l'intérêt par mois est donnée par \\(\iota{} = \frac{i}{12}\\).
+**Rappel**: l'intérêt par mois est donné par \\(\iota{} = \frac{i}{12}\\).
 
 ## Conclusion
 
@@ -474,7 +474,7 @@ Ces calculs sont déterminants dans l'examen de l'avantage à acheter une
 propriété. Cependant, ces chiffres ne sont pas suffisants puisqu'il faut aussi
 considérer les frais qui s'ajoutent à l'habitation comme j'ai mentionné plus
 haut dans l'article. Bien sûr d'autres facteurs jouent comme la mise de fond
-initiale disponible, les frais ponctuels à l'achat (notaire, taxe de Bienvenue,
+initiale disponible, les frais ponctuels à l'achat (notaire, droits de mutation,
 etc.), le coût d'un courtier lors de la vente de la propriété ainsi que
 l'augmentation potentielle moyenne de la valeur de la propriété. En effet, afin
 de calculer l'avantage d'un achat, il est primordial de calculer les frais de
