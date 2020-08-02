@@ -171,7 +171,7 @@ Dans la dernière section, nous avons déterminé le calcul pour le paiement
 bancaire régulier à faire par année pour régler sa dette après \\(n\\) années.
 Qu'en est-il de la somme d'hypothèque payée après \\(n\\) années? Bien sûr, si
 on effectue notre paiement sur 25 ans et qu'on s'interroge à connaître
-\\(\sum_{k=1}^25 x_k\\), il est clair que cela est équivalent à le montant de
+\\(\sum_{k=1}^{25} x_k\\), il est clair que cela est équivalent à le montant de
 prêt hypothécaire final \\(H_0\\) puisqu'on a réglé \\(P\\) de sorte qu'on ait
 tout payé après 25 ans. Mais, si on s'intéressait plutôt à le montant de prêt
 hypothécaire payée après 5 ans pour un paiement qui s'effectue sur 25 ans?
@@ -354,7 +354,7 @@ simple forme, c.-à-d. tel que décrite au départ plus haut dans le document co
 bon fonctionnement de la formule, du moins pour le cas \\(n=1\\).
 
 Voilà qui est bien. Cependant, je dois rappeler au lecteur que cette expression
-ne nous fournit que la valeur de le montant de prêt hypothécaire à payer la
+ne nous fournit que la valeur du montant de prêt hypothécaire à payer la
 \\(n^{e}\\) année. Il serait intéressant d'obtenir la somme d'hypothèque payée
 au bout de \\(n\\) années. Notons cette somme au bout de \\(k\\) années
 \\(X_n\\). Cela correspond donc à l'expression suivante:
@@ -363,7 +363,7 @@ $$
 X_n = \sum_{k=1}^n x_k = (P - iH_0) \sum_{k=1}^n (i+1)^{k-1}
 $$
 
-Cette expression se résoud à finalement à:
+Cette expression se résoud finalement à:
 
 ---
 
@@ -442,7 +442,7 @@ Ces calculs sont déterminants dans l'examen de l'avantage à acheter une
 propriété. Cependant, ces chiffres ne sont pas suffisants puisqu'il faut aussi
 considérer les frais qui s'ajoutent à l'habitation comme j'ai mentionné plus
 haut dans l'article. Bien sûr d'autres facteurs jouent comme la mise de fond
-initiale disponible, les frais ponctuels à l'achat (notaire, taxe de bienvenue,
+initiale disponible, les frais ponctuels à l'achat (notaire, taxe de Bienvenue,
 etc.), le coût d'un courtier lors de la vente de la propriété ainsi que
 l'augmentation potentielle moyenne de la valeur de la propriété. En effet, afin
 de calculer l'avantage d'un achat, il est primordial de calculer les frais de
