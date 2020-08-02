@@ -338,7 +338,7 @@ $$
 Plus généralement, on écrira donc:
 
 $$
-x_m = (P - \iota{}H_0)\sum_{k=0}^{n-1} {n-1 \choose k}\iota{}^{k}
+x_m = (P - \iota{}H_0)\sum_{k=0}^{m-1} {m-1 \choose k}\iota{}^{k}
 $$
 
 Or, l'expression \\(\sum_{k=0}^{n-1} {n-1 \choose k}\iota{}^{k}\\) est très connue! Il
