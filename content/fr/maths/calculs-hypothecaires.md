@@ -342,14 +342,14 @@ $$
 x_m = (P - \iota{}H_0)\sum_{k=0}^{m-1} {m-1 \choose k}\iota{}^{k}
 $$
 
-Or, l'expression \\(\sum_{k=0}^{n-1} {n-1 \choose k}\iota{}^{k}\\) est très connue! Il
+Or, l'expression \\(\sum_{k=0}^{m-1} {m-1 \choose k}\iota{}^{k}\\) est très connue! Il
 s'agit d'un [binôme de Newton][binewton] qui correspond à l'expression
-\\((\iota{}+1)^{n-1}\\). Ce faisant, on peut réécrire \\(x_m\\) comme suit:
+\\((\iota{}+1)^{m-1}\\). Ce faisant, on peut réécrire \\(x_m\\) comme suit:
 
 ---
 
 $$
-x_m = (P - \iota{}H_0)(\iota{}+1)^{n-1}
+x_m = (P - \iota{}H_0)(\iota{}+1)^{m-1}
 $$
 
 ---
