@@ -41,7 +41,8 @@ reste à payer après \\(k\\) années de paiement. Le montant du prêt sera donc
 noté \\(H_0\\).  Notons maintenant \\(P\\) le paiement bancaire à faire par
 année pour arriver à payer notre prêt au fil des années. Il faut bien sûr
 considérer aussi finalement l'intérêt sur le prêt. Notons-le pourcentage associé
-à l'intérêt par année \\(i\\). De cela, si on souhaitait payer notre prêt en une
+à l'intérêt par année \\(i\\). Bien entendu, \\(i\\) a comme domaine de valeurs
+l'intervalle \\([0,1]\\). De cela, si on souhaitait payer notre prêt en une
 seule année, on pourrait alors écrire:
 
 $$
@@ -64,22 +65,32 @@ $$
 (H_0(i+1) - P)(i+1) - P = 0
 $$
 
-Bien sûr! Puisque la seconde année, le montant de prêt hypothécaire restant
-était \\(H_0(i+1) - P\\). On voit bien que cette quantité a été multipliée par
-\\((i+1)\\), comme c'était le cas pour \\(H_0\\) la première année. Notez bien
-qu'ici, \\(P\\) ne vaut pas la même quantité que dans le scénario où on paie
-tout en une année. Bien sûr, le montant est un peu plus gros que la moitié de
-l'ancien montant pour \\(P\\). Bref, si on continuait le procédé jusqu'à \\(n\\)
-années, on aurait alors:
+Bien sûr! Puisque la seconde année, la **somme restante à payer**, c'est-à-dire
+le montant hypothécaire en plus des intérêts sur la première année avec le tout
+retranché du premier paiement, était \\(S_0 = H_0(i+1) - P\\). Dans l'expression
+ci-haut, on voit bien que cette quantité a été multipliée par \\((i+1)\\), comme
+c'était le cas pour \\(H_0\\) la première année. En fait, on retrouve la même
+forme que pour la première année si on substitute \\(S_0\\) dans l'équation:
+
+$$
+S_0(i+1) - P = 0,\quad\text{avec}\ S_0 = H_0(i+1) - P
+$$
+
+Notez bien qu'ici, \\(P\\) ne vaut pas la même quantité que dans le scénario où
+on paie tout en une année.  Bien sûr, le montant est un peu plus gros que la
+moitié de l'ancien montant pour \\(P\\). Bref, si on continuait le procédé
+jusqu'à \\(n\\) années, on aurait alors:
 
 $$
 (...(H_0(i+1) - P)(i+1) - P ...)(i+1) - P = 0
 $$
 
 où \\(H_0\\) (ou \\(P, i\\)) apparaîtrait \\(n\\) fois dans l'expression.
-Reprenons l'expression de départ et réordonnançons le tout comme:
+Reprenons l'expression de départ et réordonnançons le tout:
 
 $$
+H_0(i+1) - P = 0
+\implies
 H_0 = \frac{P}{(i+1)}
 $$
 
