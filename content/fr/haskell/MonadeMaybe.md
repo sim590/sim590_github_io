@@ -406,11 +406,11 @@ takeWhile isJust mcontacts
 
 Cette dernière instruction parcourt la liste `mcontacts` de type `[Maybe (Nom,
 NumeroDeTelephone)]`. Il s'agit du retour d'exécution pour chaque nom. Par
-contre, `takeWhileM (return . isJust)` stoppe l'itération dès qu'une des valeurs
-dans la liste est `Nothing` (c.-à-d. que `isJust` retourne FAUX). Ce faisant, on
-ne va pas plus loin dans la liste dès qu'on rencontre un résultat `Nothing`.
-De plus, comme Haskell est [paresseux][], les itérations de `forM` plus haut ne
-seront pas exécutées pour tous les éléments suivant le premier où on a rencontré
+contre, `takeWhile isJust` stoppe l'itération dès qu'une des valeurs dans la
+liste est `Nothing` (c.-à-d. que `isJust` retourne FAUX). Ce faisant, on ne va
+pas plus loin dans la liste dès qu'on rencontre un résultat `Nothing`.  De plus,
+comme Haskell est [paresseux][], les itérations de `forM` plus haut ne seront
+pas exécutées pour tous les éléments suivant le premier où on a rencontré
 `Nothing`.
 
 ```haskell
