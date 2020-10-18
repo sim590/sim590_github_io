@@ -370,7 +370,7 @@ void numeros_a_vide(const std::vector<std::string>& noms) {
 ```
 
 Le lecteur voit tout de suite comment on est forcé d'écrire du code redondant
-sur traduisant la gestion d'erreur. En Haskell ?
+traduisant la gestion d'erreur. En Haskell ?
 
 ```haskell
 numerosAVide :: [Nom]
