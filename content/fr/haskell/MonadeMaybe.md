@@ -17,7 +17,7 @@ fonctionnel que je maîtrise le mieux et que je le considère très expressif et
 accessible. Afin de démontrer les bénéfices de la monade et des concepts
 d'Haskell, je vais comparer ceux-ci aux méthodes usuelles du langage C++.
 
-En une phrase, la monade `Maybe` peut-être vue comme un _design pattern_ de
+En une phrase, la monade `Maybe` peut être vue comme un _design pattern_ de
 gestion des cas d'erreur ou d'exception. Je vais donc utiliser un exemple fictif
 et crédule, mais simple, qui permet de capturer l'idée générale. Disons qu'on a
 une liste de contacts pour lesquels on souhaite exécuter un traitement.
@@ -87,7 +87,7 @@ En Haskell, on écrirait plutôt:
 
 ```haskell
 retrouverNumero :: Nom
-                 -> Maybe NumeroDeTelephone
+                -> Maybe NumeroDeTelephone
 retrouverNumero nom0 = snd <$> find (\ (nom, _) -> nom == nom0) numeros
 ```
 
@@ -108,7 +108,7 @@ le code plus haut comme suit:
 
 ```haskell
 retrouverNumero :: Nom
-                 -> Maybe NumeroDeTelephone
+                -> Maybe NumeroDeTelephone
 retrouverNumero nom0 = parcourir numeros
   where
     parcourir [] = Nothing     -- on ne retrouve pas le nom
@@ -160,7 +160,7 @@ nous:
 
 ```haskell
 retrouverContact :: Nom
-                  -> Maybe Contact
+                 -> Maybe Contact
 retrouverContact nom = do
   numero <- retrouverNumero nom
   return $ Contact nom numero
@@ -226,7 +226,7 @@ correspond exactement à `ma >>= fa`, ce qui mène au type `m b` dans la monade
 
 ```haskell
 retrouverContact :: Nom
-                  -> Maybe Contact
+                 -> Maybe Contact
 retrouverContact nom = retrouverNumero nom >>= creerContact
   where
     creerContact :: NumeroDeTelephone -> Maybe Contact
@@ -356,9 +356,9 @@ exemple, si on souhaitait changer le numéro de téléphone pour la chaîne de
 caractères vide, alors on écrirait possiblement:
 
 ```cpp
-void numeros_a_vide() {
+void numeros_a_vide(const std::vector<std::string>& noms) {
     bool succes = true;
-    for (const auto& nom : {"Jean", "Roger", "Sophie", "Maurice", "Charles"}) {
+    for (const auto& nom : noms) {
         if (succes) {
             succes = traiterContact(nom, "");
             if (not succes) {
@@ -381,7 +381,7 @@ numerosAVide noms = do
     when (isNothing mc) $
       putStrLn "Erreur!! Un contact est introuvable.."
     return mc
-  return . catMaybes =<< takeWhileM (return . isJust) mcontacts
+  return . catMaybes $ takeWhile isJust mcontacts
 ```
 
 Et bien, on ne fait qu'exécuter `traiterContact` pour tous les noms dans la
