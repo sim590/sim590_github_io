@@ -19,8 +19,8 @@ d'Haskell, je vais comparer ceux-ci aux méthodes usuelles du langage C++.
 
 En une phrase, la monade `Maybe` peut être vue comme un _design pattern_ de
 gestion des cas d'erreur ou d'exception. Je vais donc utiliser un exemple fictif
-et crédule, mais simple, qui permet de capturer l'idée générale. Disons qu'on a
-une liste de contacts pour lesquels on souhaite exécuter un traitement.
+et peu réaliste, mais simple, qui permet de capturer l'idée générale. Disons
+qu'on a une liste de contacts pour lesquels on souhaite exécuter un traitement.
 Cependant, on décide que, dans la région du programme où on implémente le code
 associé à cette liste de contact, une opération qui échoue sur un contact
 devrait arrêter le fil d'exécution du programme.
@@ -152,7 +152,7 @@ retrouverContact(const std::string& nom) {
 }
 ```
 
-Encore une fois, on doit gérer le cas où le numéro n'est pas retrouver. Ceci se
+Encore une fois, on doit gérer le cas où le numéro n'est pas retrouvé. Ceci se
 traduit par la vérification à savoir si `retrouverNumero` a retourné
 `std::end(numeros)` ou non. On gère donc ici explicitement ce cas. En Haskell,
 pas du tout!! On peut simplement demander à la monade Maybe de le faire pour
@@ -429,9 +429,9 @@ Haskell est un langage du paradigme fonctionnel contrairement à C++ dont le
 paradigme principal qui n'est pas partagé avec Haskell est le paradigme
 impératif. Ces deux méthodes de penser la programmation ont mené à des
 évolutions conceptuelles différentes. Le paradigme fonctionnel a plusieurs
-bonnes contributions en matière de bonnes pratiques à partager les autres. On
-voit depuis quelques temps les concepts fonctionnels faire leur chemin jusque
-dans les langage n'étant à la base pas fonctionnels. On peut penser à toutes les
+bonnes contributions en matière de bonnes pratiques à partager avec les autres.
+On voit depuis quelques temps les concepts fonctionnels faire leur chemin jusque
+dans les langages n'étant à la base pas fonctionnels. On peut penser à toutes les
 fonctions standards comme `map`, `filter`, `fold`, etc. Les monades sont une
 abstraction puissante et sont essentielle dans le paradigme fonctionnel afin de
 traduire le séquençage d'états de manière réellement utilisable. La monade
