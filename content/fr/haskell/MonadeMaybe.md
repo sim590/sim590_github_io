@@ -401,7 +401,7 @@ NumeroDeTelephone)`. Si le résultat est dans l'état `Nothing`, alors on affich
 un message d'erreur. Finalement, on retourne le résultat.
 
 ```haskell
-takeWhileM (return . isJust) mcontacts
+takeWhile isJust mcontacts
 ```
 
 Cette dernière instruction parcourt la liste `mcontacts` de type `[Maybe (Nom,
