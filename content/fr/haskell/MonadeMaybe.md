@@ -442,5 +442,5 @@ et d'autres. J'encourage donc à découvrir Haskell car c'est en quelque sorte u
 manière d'apprendre les fonctions standards de demain qui deviendront dès lors
 incontournables.
 
-<!-- vim: set sts=2 ts=2 sw=2 tw=80 et :-->
+<!-- vim: set ft=pandoc.markdown.html sts=2 ts=2 sw=2 tw=80 et :-->
 
