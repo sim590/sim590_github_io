@@ -21,12 +21,12 @@ tout, ils sont des concepts clefs dans l'utilisation sérieuse d'un langage
 fonctionnel comme Haskell. Par exemple, on ne peut pas faire d'opérations
 d'entrée/sortie si on ne fonctionne pas dans la monade `IO`.
 
-Une limitation importante prend forme très rapidement sous nos yeux: il est
-devient difficile d'utiliser plusieurs monades ensembles car on doit forcément
-les développer pour passer d'une monade à l'autre. Ce faisant, on doit choisir
-entre les propriétés d'une monade ou l'autre et on ne peut donc pas bénéficier
-des différents monades en même temps. Les transformateurs de monades visent
-justement régler ce problème de manière à fournir une écriture finale
+Une limitation importante prend forme très rapidement sous nos yeux: il devient
+difficile d'utiliser plusieurs monades ensembles car on doit forcément les
+développer pour passer d'une monade à l'autre. Ce faisant, on doit choisir entre
+les propriétés d'une monade ou l'autre et on ne peut donc pas bénéficier des
+différents monades en même temps. Les transformateurs de monades visent
+justement à régler ce problème de manière à fournir une écriture finale
 satisfaisante autant au niveau sémantique que pour l'organisation logique du
 code.
 
@@ -42,10 +42,10 @@ getPassWord = do
 ```
 
 Ici, on récupère un mot de passe simplement en lisant la ligne à l'entrée
-standard. Et si la fonction devait pouvoir retourner un résultat d'erreur si le
-mot de passe ne répond pas à un certain critère? Par exemple, on pourrait
-demander que le mot de passe soit entre 6 et 8 caractères. Dans un premier
-temps, on pourrait imaginer pouvoir écrire la chose suivante:
+standard. Qu'arrive-t-il si la fonction devait pouvoir retourner un résultat
+d'erreur lorsque le mot de passe ne répond pas à un certain critère? Par
+exemple, on pourrait demander que le mot de passe soit entre 6 et 8 caractères.
+Dans un premier temps, on pourrait imaginer pouvoir écrire la chose suivante:
 
 ```haskell
 getPassword :: IO (Maybe String)
@@ -103,7 +103,7 @@ monade `Maybe` en plus des propriétés de la monade `IO`.
 
 Supposons qu'on veuille écrire une fonction faisant la génération d'un nombre
 dans un intervalle tout en assurant que l'intervalle n'ait pas une taille plus
-élevé qu'un certain maximum. On pourrait imaginer pouvoir écrire la chose
+élevée qu'un certain maximum. On pourrait imaginer pouvoir écrire la chose
 suivante:
 
 <!-- TODO: ajouter  les "imports" -->
@@ -219,7 +219,7 @@ main = do
 Dans ce cas-ci, `runMaybeT (decodeFile theFilePath)` a le type précis `IO (Maybe
 String)`. Le lecteur devrait remarquer maintenant qu'en spécifiant le type de
 retour `MaybeT IO String` sur la fonction `decodeFile`, on a orchestré
-l'exécution de `Maybe` par dessus de la monade `IO`. En général, les
+l'exécution de `Maybe` par dessus la monade `IO`. En général, les
 transformateurs permettent de créer des _piles de monades_. Ces piles sont
 ensuite développées du haut vers le bas. Par exemple, le type suivant:
 
@@ -247,7 +247,7 @@ suivant:
 
 ### MaybeT
 
-Ramenons la définition de `MaybeT`:
+Rappelons la définition de `MaybeT`:
 
 ```haskell
 newtype MaybeT m a = MaybeT { runMaybeT :: m (Maybe a) }
@@ -277,10 +277,10 @@ instance Monad (MaybeT m) where
       Nothing -> return Nothing
 ```
 
-On voit que dans la monade `MaybeT` la monade `m` s'exécute en premier en
+On voit que dans la monade `MaybeT`, la monade `m` s'exécute en premier en
 prenant `mbta` et en le passant dans le bloc `do` pour le développer comme `ma`,
 une variable de type `Maybe a`. Ce faisant, à ce point-ci, l'effet de la monade
-`m` a déjà eu lieu. En suite, le reste de l'exécution du bloc `do` consiste en
+`m` a déjà eu lieu. Ensuite, le reste de l'exécution du bloc `do` consiste en
 l'effet contribué par la monade `MaybeT` dans la pile de monades:
 
 ```haskell
@@ -361,13 +361,13 @@ randomNumberInInterval a b = do
   lift $ generateRandomNumberInInterval a x
 ```
 
-C'est exactement ce qu'on souhait faire plus haut, à la différence près que les
+C'est exactement ce qu'on souhaite faire plus haut, à la différence près que les
 instructions (fautives) `return` ont été remplacées par `lift`. On bénéficie
 donc ici des effets des deux monades en simultané, c.-à-d. que le fil
 d'exécution est régit par les effets de `Maybe` via les instructions `guard` et
 finalement `lift` permet de récupérer la valeur `x`. De plus, l'état `s`
 retourné par le premier appel de `generateRandomNumberInInterval` est fournit en
-entrée au second appel. En d,autres termes, l'état `s` est partagé.
+entrée au second appel. En d'autres termes, l'état `s` est partagé.
 
 ### Classes de types
 
@@ -495,7 +495,7 @@ Les monades sont une pièce angulaire de la programmation fonctionnelle. Or, le
 besoin se fait vite ressentir de combler le manque de composition des monades
 lorsqu'on développe en Haskell. Les transformateurs permettent de combler ce
 manque de façon à rendre l'écriture du code plus puissante. Les classes de type
-de la bibliothèque MTL viennent compléter avec une touche de générécité ce qui
+de la bibliothèque MTL viennent compléter avec une touche de généricité ce qui
 augmente considérablement les capacités des transformateurs. En somme, les
 transformateurs sont un incontournable de la programmation en Haskell.
 
