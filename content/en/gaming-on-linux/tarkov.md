@@ -4,7 +4,7 @@ categories:       ['Gaming']
 title:            "Escape From Tarkov: Yes! GNU/Linux runs it!"
 date:             2022-02-12T09:57:51-05:00
 description:
-draft:            true
+draft:            false
 hideToc:          false
 enableToc:        false
 enableTocContent: false
