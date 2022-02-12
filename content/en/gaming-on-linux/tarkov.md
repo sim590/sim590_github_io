@@ -68,7 +68,8 @@ is the main attraction of this game.
 
 This is big bummer for Tarkov Penguins (as they call themselves on Discord) that have bought the
 game as there is no progress saved when they play offline. But don't think that Tarkov Penguins want
-to play without anti-cheat software. That's exactly what they're asking for on the EFT forums:
+to play without anti-cheat software. Anti-cheat support is exactly what they're asking for on the
+EFT forums:
 
 https://forum.escapefromtarkov.com/topic/157618-linuxmac-proton-support/
 https://forum.escapefromtarkov.com/topic/161249-proton-support-a-single-e-mail-away/
