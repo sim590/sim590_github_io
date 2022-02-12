@@ -20,10 +20,11 @@ call this game full featured.
 
 Yes, the title says that GNU/Linux runs EFT (Escape From Tarkov), but does that mean that [BSG][]
 (BattleStateGames), the game studio, has made a fully supported Linux port? Well, no. But that is
-not surprising at all! Indeed, most popular games that run on GNU/Linux actually don't run natively,
-but use a platform compatibility tool that is called [Wine][] (Wine Is Not an Emulator). This
-compatibility tool has been developed since 1993 by its community and with the support of
-[CodeWeavers][].
+not surprising at all!
+
+Indeed, most popular games that run on GNU/Linux actually don't run natively, but use a platform
+compatibility tool that is called [Wine][] (Wine Is Not an Emulator). This compatibility tool has
+been developed since 1993 by its community and with the support of [CodeWeavers][].
 
 [BSG]: https://www.battlestategames.com/
 [Wine]: https://www.winehq.org/
@@ -34,26 +35,36 @@ developing [Proton][] a compatibility tool much like Wine. Actually, Proton is r
 tuned by the hand of Valve for assuring that their product Steam can make their offered games run
 without any intervention by the user.
 
-<div align=center>
-  <img width=600 src="/images/valve-proton.jpg" alt="Proton log"/>
-  </br>
-</div>
-
 [Proton]: https://github.com/ValveSoftware/Proton
 [Steam]: https://store.steampowered.com/
 [Valve]: https://www.valvesoftware.com/
 
-So in short, **EFT works well on GNU/Linux**... There's a Youtube video that demonstrates it:
+### EFT works well on GNU/Linux
+
+There's a YouTube video that demonstrates it:
 
 <div style="text-align:center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/sWqpHZvbaRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </br></br>
 </div>
 
-And there are at least 500 people playing regularly which participate in discussions [on
+<!-- TODO: plus d'exemples -->
+
+And there are at least 650 people playing regularly which participate in discussions [on
 Discord][eft-linux-discord].
 
 [eft-linux-discord]: https://discord.gg/5zM86yJBYs
+
+##### The Steam Deck
+
+It is worth noting that the [Steam deck][steam-deck] runs literally a fork of [Archlinux][].
+Therefore, this new product of Valve that has a ton of promises regarding the support it will
+provide for the Steam library and other titles is a good reason for game developers to get
+interested in Proton support. Indeed, it would be really nice to see EFT run on the Steam Deck and
+it will.
+
+[steam-deck]: https://www.steamdeck.com/
+[Archlinux]: https://www.archlinux.org/
 
 ### But ...
 
