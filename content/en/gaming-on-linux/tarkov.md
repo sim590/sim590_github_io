@@ -93,16 +93,22 @@ EFT forums:
 https://forum.escapefromtarkov.com/topic/157618-linuxmac-proton-support/
 https://forum.escapefromtarkov.com/topic/161249-proton-support-a-single-e-mail-away/
 
-<iframe src="https://clips.twitch.tv/embed?clip=HorribleInnocentReindeerYouDontSay-myi7a0MZVELZyRGf&parent=sim590.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+and through a Twitch interview :smile::
+
+<div style="text-align:center">
+  <iframe src="https://clips.twitch.tv/embed?clip=HorribleInnocentReindeerYouDontSay-myi7a0MZVELZyRGf&parent=sim590.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+</div>
 
 ### BattlEye and Proton
+
+BattlEye and Steam [have announced it][steam-announce]: enabling BattlEye on Proton will be as
+simple as sending an e-mail.
 
 <div align=center>
 {{< tweet user="TheBattlEye" id="1441477816311291906" >}}
 </div>
 
-BattlEye and Steam [have announced it][steam-announce]: enabling BattlEye on Proton will be as
-simple as sending an e-mail. As per their [official documentation for Proton][proton-doc]:
+As per their [official documentation for Proton][proton-doc]:
 
 >Proton supports BattlEye and BattlEye-enabled games. Each title requires a manual configuration
 step, so please email your Valve or BattlEye technical contact for details.
