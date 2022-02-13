@@ -3,7 +3,6 @@ tags:             ['EFT', 'EscapeFromTarkov', 'Tarkov', 'GNU/Linux', 'Proton', '
 categories:       ['Gaming']
 title:            "Escape From Tarkov: Yes! GNU/Linux runs it!"
 date:             2022-02-12T09:57:51-05:00
-description:
 draft:            false
 hideToc:          false
 enableToc:        false
@@ -41,14 +40,23 @@ without any intervention by the user.
 
 ### EFT works well on GNU/Linux
 
-There's a YouTube video that demonstrates it:
+The following screen capture have been taken from within the game running on GNU/Linux.
+
+{{< image-gallery gallery_dir="tarkov" >}}
+
+There are a few YouTube videos that demonstrate it. For example, there's this one which makes a sort
+of benchmark comparison between Windows and GNU/Linux:
 
 <div style="text-align:center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/sWqpHZvbaRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </br></br>
 </div>
 
-<!-- TODO: plus d'exemples -->
+There's this one which demonstrates playable features, which is everything except online raids:
+
+<div style="text-align:center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/e74BT0u9_6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 And there are at least 650 people playing regularly which participate in discussions [on
 Discord][eft-linux-discord].
