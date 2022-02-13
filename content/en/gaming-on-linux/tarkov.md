@@ -1,7 +1,7 @@
 ---
 tags:             ['EFT', 'EscapeFromTarkov', 'Tarkov', 'GNU/Linux', 'Proton', 'Wine']
 categories:       ['Gaming']
-title:            "Escape From Tarkov: Yes! GNU/Linux runs it!"
+title:            "Escape from Tarkov: Yes! GNU/Linux runs it!"
 date:             2022-02-12T09:57:51-05:00
 draft:            false
 hideToc:          false
@@ -10,14 +10,14 @@ enableTocContent: false
 meta_image:       "images/Escape-from-Tarkov-header.jpg"
 ---
 
-Escape From Tarkov is hyper-realistic first person shooter game including survival, weapon
+Escape from Tarkov is hyper-realistic first person shooter game including survival, weapon
 personalization, looting and questing mechanics. It is a well-known game which has been available to
 play since 2016. However this game has stayed in Beta state since then, it is perfectly correct to
 call this game full featured.
 
-![EFT_splash](/images/Escape-from-Tarkov-header.jpg "Escape From Tarkov Splash Screen")
+![EFT_splash](/images/Escape-from-Tarkov-header.jpg "Escape from Tarkov Splash Screen")
 
-Yes, the title says that GNU/Linux runs EFT (Escape From Tarkov), but does that mean that [BSG][]
+Yes, the title says that GNU/Linux runs EFT (Escape from Tarkov), but does that mean that [BSG][]
 (BattleStateGames), the game studio, has made a fully supported Linux port? Well, no. But that is
 not surprising at all!
 
