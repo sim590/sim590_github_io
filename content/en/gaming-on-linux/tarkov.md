@@ -93,6 +93,8 @@ EFT forums:
 https://forum.escapefromtarkov.com/topic/157618-linuxmac-proton-support/
 https://forum.escapefromtarkov.com/topic/161249-proton-support-a-single-e-mail-away/
 
+<iframe src="https://clips.twitch.tv/embed?clip=HorribleInnocentReindeerYouDontSay-myi7a0MZVELZyRGf&parent=sim590.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+
 ### BattlEye and Proton
 
 <div align=center>
