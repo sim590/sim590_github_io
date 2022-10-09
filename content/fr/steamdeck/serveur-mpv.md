@@ -14,18 +14,18 @@ meta_image:        "images/steamdeck/mpv/mpv.png"
 J'avais commandé une [Steam Deck][steamdeck], un terminal mobile (selon [la traduction de
 l'OQLF][oqlf-hanheld]) basé sur [Archlinux][], dès le moment que j'ai appris l'existence de ce
 projet par [Valve][]. Ce terminal mobile est en fait un ordinateur complet ayant comme principale
-fonction de fournir une plateforme de jeu portable, mais en réalité il permet des
+fonction de fournir une plateforme de jeu portable, mais en réalité il permet une panoplie de choses
+qui la rend capable de surpasser la compétition.
 
 ![steamdeck](/images/steamdeck/steamdeck.png)
 
-Pour plusieurs raisons, mais principalement parce que je crois que c'est un appareil qui jouera un
-rôle central dans le cheminement de GNU/Linux vers un statut de système plus populaire chez les gens
-moins techniques et non initiés.
+Pourquoi ? Pour plusieurs raisons, mais principalement parce que je crois que c'est un appareil qui
+jouera un rôle central dans le cheminement de GNU/Linux vers un statut de système plus populaire
+chez les gens moins techniques et non initiés.
 
 Cet appareil est super autant pour les gens qui aiment bidouiller que les gens lambdas. Autrement
-dit, l'appareil offre toutes les fonctions nécessaires à une personne qui souhaite simplement un
-appareil qui fonctionne pour jouer à des jeux tout en permettant à ceux qui veulent plus de creuser
-et s'amuser pleinement.
+dit, l'appareil offre toutes les fonctions nécessaires pour jouer à des jeux sans se casser la tête
+tout en permettant à ceux qui veulent plus de creuser et s'amuser pleinement.
 
 Dans le cadre de mes expériences avec cet appareil, j'ai pu:
 
@@ -34,7 +34,7 @@ Dans le cadre de mes expériences avec cet appareil, j'ai pu:
 * [installer des greffons][greffons] pour augmenter l'expérience de l'environnement de jeu de la
 Steam Deck;
 * installation de logiciels serveur comme MPD pour jouer de la musique dans mon salon avec mon
-téléphone comme terminal de contrôle.
+téléphone comme terminal de contrôle;
 * installer des vieux logiciels comme Heroes of Might and Magic 3 avec une prise en charge de TCP/IP
 grâce à WINE, `winetricks` et DirectPlay (un projet qui n'est plus pris en charge sur Windows).
 
@@ -48,7 +48,7 @@ minimum technique, c'est faisable en quelques minutes. L'approche que je propose
 d'utiliser la Steam Deck pour afficher une vidéo sur la télé (branchée sur la Steam Deck) dans le
 confort de son divan.
 
-![mpv](/images/mpv.png)
+![mpv](/images/steamdeck/mpv/mpv.png)
 
 Le programme MPV admet les options suivantes qui seront utiles:
 
