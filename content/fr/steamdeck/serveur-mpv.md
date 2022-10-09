@@ -120,7 +120,7 @@ Une fois ceci fait, écrivons le script suivant sous `~/bin/mpv-server.sh`:
 ```
 #!/usr/bin/env bash
 
-flatpak run io.mpv.Mpv --keep-open --force-window --input-ipc-server=~/mpv.socket ~/Images/Icônes/mpv.png
+flatpak run io.mpv.Mpv --keep-open --force-window --input-ipc-server=/tmp/mpv.socket ~/Images/Icônes/mpv.png
 ```
 
 Il est nécessaire d'utiliser un fichier multimédia pour ouvrir `mpv` et le garder ouvert en
@@ -179,7 +179,7 @@ EOF
 }
 
 send_mpv_command() {
-  ssh deck@steamdeck.local "echo '{ \"command\": $@ }' | socat - ~/mpv.socket"
+  ssh deck@steamdeck.local "echo '{ \"command\": $@ }' | socat - /tmp/mpv.socket"
 }
 
 toggle=false
