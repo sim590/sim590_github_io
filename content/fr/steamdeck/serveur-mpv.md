@@ -210,7 +210,7 @@ if [[ "$toggle" == "true" ]]; then
   send_mpv_command "[\"keypress\", \"space\"]"
 else
   send_mpv_command "[\"loadfile\", \"$URL\"]"
-  send_mpv_command "[\"keypress\", \"space\"]"
+  send_mpv_command "[\"playlist-play-index\", \"current\"]"
 fi
 ```
 
