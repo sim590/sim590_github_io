@@ -207,10 +207,10 @@ URL=$1
 input_command_value=
 
 if [[ "$toggle" == "true" ]]; then
-  send_mpv_command "[\"keypress\", \"space\"]"
+  send_mpv_command "[\"cycle\", \"pause\"]"
 else
   send_mpv_command "[\"loadfile\", \"$URL\"]"
-  send_mpv_command "[\"playlist-play-index\", \"current\"]"
+  send_mpv_command "[\"set_property\", \"pause\", \"no\"]"
 fi
 ```
 
